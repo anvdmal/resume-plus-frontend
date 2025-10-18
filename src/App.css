@@ -40,3 +40,86 @@
 .read-the-docs {
   color: #888;
 }
+
+.main-content {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: calc(1280px - 240px);
+}
+
+.logo-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.import-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.import-btn {
+  padding: 0.8em 1.5em;
+  font: var(--font-body-opensans-semibold-18);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.import-btn.pdf {
+  background-color: var(--secondary-chine-rose-100);
+  color: white;
+}
+
+.import-btn.json {
+  background-color: var(--info-tan-100);
+  color: var(--text-dark-grey-100);
+}
+
+.import-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.main-content.sidebar-collapsed {
+  margin-left: 60px;
+  padding-left: 2rem;
+}
+
+.main-content.sidebar-collapsed .hamburger {
+  display: block;
+}
+
+.hamburger {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: var(--primary-moonstone-100);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  z-index: 999;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.main-content.sidebar-open .hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 2rem;
+  }
+}
