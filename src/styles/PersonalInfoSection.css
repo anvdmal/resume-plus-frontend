@@ -1,0 +1,61 @@
+.personal-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.personal-info-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.photo-column {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.photo-column .photo-upload {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fields-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.group-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .personal-info-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .photo-column {
+        justify-content: center;
+    }
+
+    .photo-column .photo-upload {
+        width: 140px;
+        height: 140px;
+    }
+
+    .group-column {
+        grid-template-columns: 1fr;
+    }
+}

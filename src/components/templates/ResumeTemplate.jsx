@@ -1,10 +1,18 @@
 import React from "react";
 import "../../styles/ResumeTemplate.css";
 
-const ResumeTemplate = ({data, template}) => {
-    const {personal, contacts, experience, education, skills} = data;
 
-    return (
+    const ResumeTemplate = ({ data = {}, template }) => {
+        const {
+            personal = {},
+            contacts = { social: [] },
+            experience = [],
+            education = [],
+            skills = { languages: [] },
+        } = data;
+
+
+        return (
         <div className={`resume-template resume-template--${template}`}>
             <header className="resume-header">
                 {personal.photo && <img src={personal.photo} alt="Фото" className="avatar"/>}

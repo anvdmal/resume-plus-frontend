@@ -4,6 +4,7 @@ import InputField from '../../ui/InputField.jsx';
 import PhotoUpload from '../PhotoUpload.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import DatePickerField from '../DatePickerField.jsx';
+import '../../../styles/PersonalInfoSection.css';
 
 export default function PersonalInfoSection({ control }) {
   return (
