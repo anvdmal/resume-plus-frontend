@@ -66,7 +66,7 @@ function SocialSection({ control, errors, index, onRemove }) {
                 />
               )}
             />
-            {platformError && <p className="error">{platformError.message}</p>}
+            {/* {platformError && <p className="error">{platformError.message}</p>} */}
           </div>
           <div className="input-container">
             <Controller

@@ -5,7 +5,7 @@ import PhotoUpload from '../PhotoUpload';
 import SectionHeader from '../components/SectionHeader.jsx';
 import DatePickerField from '../components/DatePickerField.jsx';
 
-export default function PersonalInfoSection({ control, errors, setPhotoPreview }) {
+export default function PersonalInfoSection({ control, errors }) {
   return (
     <section className="personal-info-section section">
       <SectionHeader 
@@ -14,7 +14,7 @@ export default function PersonalInfoSection({ control, errors, setPhotoPreview }
       />
       <div className="personal-info-layout">
         <div className="photo-column">
-          <PhotoUpload name="photo" control={control} setPhotoPreview={setPhotoPreview} />
+          <PhotoUpload name="photo" control={control} />
         </div>
         <div className="fields-column">
           <div className="group-column">
@@ -23,25 +23,21 @@ export default function PersonalInfoSection({ control, errors, setPhotoPreview }
               control={control}
               render={({ field }) => <InputField placeholder="Имя" variant="gray" {...field} />}
             />
-            {/* {errors.firstName && <p className="error">{errors.firstName.message}</p>} */}
             <Controller
               name="lastName"
               control={control}
               render={({ field }) => <InputField placeholder="Фамилия" variant="gray" {...field} />}
             />
-            {/* {errors.lastName && <p className="error">{errors.lastName.message}</p>} */}
             <Controller
               name="middleName"
               control={control}
               render={({ field }) => <InputField placeholder="Отчество" variant="gray" {...field} />}
             />
-            {/* {errors.middleName && <p className="error">{errors.middleName.message}</p>} */}
           </div>
           <div className="group-column">
             <DatePickerField
               name="birthDate"
               control={control}
-              /* errors={errors} */
               placeholderText="Дата рождения"
               maxDate={new Date()}
             />
@@ -50,13 +46,11 @@ export default function PersonalInfoSection({ control, errors, setPhotoPreview }
               control={control}
               render={({ field }) => <InputField placeholder="Страна" variant="gray" {...field} />}
             />
-            {/* {errors.country && <p className="error">{errors.country.message}</p>} */}
             <Controller
               name="city"
               control={control}
               render={({ field }) => <InputField placeholder="Город" variant="gray" {...field} />}
             />
-            {/* {errors.city && <p className="error">{errors.city.message}</p>} */}
           </div>
         </div>
       </div>

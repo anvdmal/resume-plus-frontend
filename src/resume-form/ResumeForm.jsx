@@ -12,7 +12,6 @@ import SkillsSection from './sections/SkillsSection';
 import '../styles/ui/ResumeForm.css';
 
 export default function ResumeForm() {
-  const [photoPreview, setPhotoPreview] = useState(null);
   
   const { control, handleSubmit, formState: { errors } } = useForm({
     mode: 'onBlur',
@@ -38,7 +37,7 @@ export default function ResumeForm() {
   return (
     <div className="resume-page"> 
       <form onSubmit={handleSubmit(onSubmit)} className="resume-form">
-        <PersonalInfoSection control={control} errors={errors} setPhotoPreview={setPhotoPreview} />
+        <PersonalInfoSection control={control} errors={errors} />
         <ContactsSection control={control} errors={errors} />
         <WorkExperienceSection control={control} errors={errors} />
         <EducationSection control={control} errors={errors} />

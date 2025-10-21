@@ -48,14 +48,14 @@ function WorkExperienceItem({ control, errors, index, onRemove }) {
               control={control}
               render={({ field }) => <InputField placeholder="Компания" variant="gray" {...field} />}
             />
-            {errors.workExperience?.[index]?.company && <p className="error">{errors.workExperience[index].company.message}</p>}
+           {/*  {errors.workExperience?.[index]?.company && <p className="error">{errors.workExperience[index].company.message}</p>} */}
             
             <Controller
               name={`workExperience.${index}.position`}
               control={control}
               render={({ field }) => <InputField placeholder="Должность" variant="gray" {...field} />}
             />
-            {errors.workExperience?.[index]?.position && <p className="error">{errors.workExperience[index].position.message}</p>}
+           {/*  {errors.workExperience?.[index]?.position && <p className="error">{errors.workExperience[index].position.message}</p>} */}
           </div>
           <div className="group">
             <Controller
@@ -63,13 +63,13 @@ function WorkExperienceItem({ control, errors, index, onRemove }) {
               control={control}
               render={({ field }) => <InputField placeholder="Страна" variant="gray" {...field} />}
             />
-            {errors.workExperience?.[index]?.country && <p className="error">{errors.workExperience[index].country.message}</p>}
+            {/* {errors.workExperience?.[index]?.country && <p className="error">{errors.workExperience[index].country.message}</p>} */}
             <Controller
               name={`workExperience.${index}.city`}
               control={control}
               render={({ field }) => <InputField placeholder="Город" variant="gray" {...field} />}
             />
-            {errors.workExperience?.[index]?.city && <p className="error">{errors.workExperience[index].city.message}</p>}
+            {/* {errors.workExperience?.[index]?.city && <p className="error">{errors.workExperience[index].city.message}</p>} */}
           </div>
           
           <div className="group">
@@ -94,7 +94,7 @@ function WorkExperienceItem({ control, errors, index, onRemove }) {
             control={control}
             render={({ field }) => <TextArea placeholder="Обязанности" rows={4} {...field} />}
           />
-          {errors.workExperience?.[index]?.description && <p className="error">{errors.workExperience[index].description.message}</p>}
+          {/* {errors.workExperience?.[index]?.description && <p className="error">{errors.workExperience[index].description.message}</p>} */}
         </div>
       )}
     </div>
