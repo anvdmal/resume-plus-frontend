@@ -4,6 +4,7 @@ import CustomDropdown from '../../ui/CustomDropdown.jsx';
 import TextArea from '../../ui/TextArea.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import AddingButton from '../AddingButton.jsx';
+import CancelIcon from "../../../assets/ic-cancel.svg";
 
 const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 const languages = ['Английский', 'Немецкий', 'Французский', 'Испанский', 'Итальянский', 'Китайский', 'Японский'];
@@ -89,7 +90,7 @@ export default function SkillsSection({ control, errors }) {
           {/* {errors.languages?.[index]?.level && <p className="error">{errors.languages[index].level.message}</p>} */}
           </div>
           <button className="delete-button" onClick={() => remove(index)}>
-            <img src="../../../assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+            <img src={CancelIcon} alt="Remove" className="cancel-icon" />
             </button>
         </div>
         </div>

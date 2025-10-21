@@ -4,6 +4,7 @@ import InputField from '../../ui/InputField.jsx';
 import CustomDropdown from '../../ui/CustomDropdown.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import AddingButton from '../AddingButton.jsx';
+import CancelIcon from "../../../assets/ic-cancel.svg";
 
 const educationLevels = [
   'Среднее общее',
@@ -72,7 +73,7 @@ export default function EducationSection({ control }) {
           {/* {errors.education?.[index]?.level && <p className="error">{errors.education[index].level.message}</p>} */}
           </div>
           <button className="delete-button" onClick={() => remove(index)}>
-            <img src="../../../assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+            <img src={CancelIcon} alt="Remove" className="cancel-icon" />
             </button>
          </div>
         </div>

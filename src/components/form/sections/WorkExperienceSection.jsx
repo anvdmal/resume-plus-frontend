@@ -6,6 +6,7 @@ import OptionButtonReversed from '../OptionButtonReversed.jsx';
 import DatePickerField from '../DatePickerField.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import AddingButton from '../AddingButton.jsx';
+import CancelIcon from '../../../assets/ic-cancel.svg';
 
 function WorkExperienceItem({ control, errors, index, onRemove }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -35,7 +36,7 @@ function WorkExperienceItem({ control, errors, index, onRemove }) {
             onRemove();
           }}
         >
-          <img src="../../../assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+          <img src={CancelIcon} alt="Remove" className="cancel-icon" />
         </button>
       </div>
       {isOpen && (

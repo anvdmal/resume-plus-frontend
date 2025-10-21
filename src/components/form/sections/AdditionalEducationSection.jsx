@@ -4,6 +4,7 @@ import InputField from '../../ui/InputField.jsx';
 import CustomDropdown from '../../ui/CustomDropdown.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import AddingButton from '../AddingButton.jsx';
+import CancelIcon from "../../../assets/ic-cancel.svg";
 
 const currentYear = new Date().getFullYear();
 const years = Array.from({ length: currentYear - 1950 + 1 }, (_, i) => 1950 + i).map(String);
@@ -64,7 +65,7 @@ export default function AdditionalEducationSection({ control }) {
           {/* {errors.additionalEducation?.[index]?.year && <p className="error">{errors.additionalEducation[index].year.message}</p>} */}
           </div>
           <button className="delete-button" onClick={() => remove(index)}>
-            <img src="../../../assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+            <img src={CancelIcon} alt="Remove" className="cancel-icon" />
             </button>
           
         </div>

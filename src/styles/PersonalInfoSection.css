@@ -9,8 +9,8 @@
 }
 
 .personal-info-layout {
-    display: grid;
-    grid-template-columns: 200px 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     align-items: flex-start;
 }
@@ -18,12 +18,11 @@
 .photo-column {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
 }
 
 .photo-column .photo-upload {
     width: 180px;
-    height: 180px;
+    height: auto;
     border-radius: 12px;
     overflow: hidden;
 }

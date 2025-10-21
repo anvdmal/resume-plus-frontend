@@ -5,7 +5,7 @@ import CustomDropdown from '../../ui/CustomDropdown.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import OptionButtonReversed from '../OptionButtonReversed.jsx';
 import AddingButton from '../AddingButton.jsx';
-
+import CancelIcon from '../../../assets/ic-cancel.svg';
 
 const socialNetworks = [
   'Telegram',
@@ -46,7 +46,7 @@ function SocialSection({ control, errors, index, onRemove }) {
             onRemove();
           }}
         >
-          <img src="../../../assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+          <img src={CancelIcon} alt="Remove" className="cancel-icon" />
         </button>
       </div>
       {isOpen && (
