@@ -15,41 +15,46 @@
     grid-column: 1 / -1;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: flex-start;
+    gap: 1.5rem;
     background: var(--primary-moonstone-100);
     color: #fff;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.avatar {
+    flex-shrink: 0;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
 }
 
 .resume-header div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     line-height: 1.2;
+    min-width: 0;
 }
 
 .resume-header h1 {
     margin: 0;
-    font: var(--font-heading-firasans-bold-72)
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    word-break: break-word;
 }
 
 .resume-header p {
-    margin: 4px 0 0 0;
-    font-size: 1.1rem;
-    font-weight: 400;
-    opacity: 0.85;
-    font: var(--font-heading-firasans-semibold-24)
-}
-
-.avatar {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fff;
-    margin-right: 3.75rem;
-    margin-left: 3.75rem;
+    margin: 0.25rem 0 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.9;
+    word-break: break-word;
 }
 
 .sidebar {
@@ -65,11 +70,13 @@
     margin-bottom: 10px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 4px;
-    font: var(--font-heading-firasans-semibold-24)
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .sidebar p {
-    font: var(--font-caption-opensans-regular-14)
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .main-content {
@@ -77,12 +84,13 @@
 }
 
 .main-content section {
-    margin-top: 1.7rem;
+    margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .main-content h2 {
-    font: var(--font-heading-firasans-semibold-28);
+    font-size: 1.4rem;
+    font-weight: 600;
     color: var(--primary-moonstone-100);
     border-bottom: 2px solid var(--primary-moonstone-100);
     padding-bottom: 4px;
@@ -90,9 +98,36 @@
 }
 
 .main-content h3 {
-    font: var(--font-heading-firasans-semibold-20)
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .main-content p {
-    font: var(--font-body-opensans-regular-18)
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .resume-template {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .resume-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .resume-header p {
+        font-size: 1rem;
+    }
 }

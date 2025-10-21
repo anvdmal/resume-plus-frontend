@@ -7,7 +7,6 @@ import DatePickerField from '../DatePickerField.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import AddingButton from '../AddingButton.jsx';
 
-
 function WorkExperienceItem({ control, errors, index, onRemove }) {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -32,7 +31,7 @@ function WorkExperienceItem({ control, errors, index, onRemove }) {
         <button 
           className="delete-button" 
           onClick={(e) => {
-            e.stopPropagation(); // Останавливаем всплытие
+            e.stopPropagation();
             onRemove();
           }}
         >
