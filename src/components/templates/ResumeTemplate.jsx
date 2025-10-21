@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ResumeTemplate.css";
+import "../../styles/ResumeTemplate.css";
 
 const ResumeTemplate = ({data, template}) => {
     const {personal, contacts, experience, education, skills} = data;

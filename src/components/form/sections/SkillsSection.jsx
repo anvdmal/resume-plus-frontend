@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useFieldArray, Controller } from 'react-hook-form';
-import CustomDropdown from '../../components/ui/CustomDropdown';
-import TextArea from '../../components/ui/TextArea';
-import SectionHeader from '../components/SectionHeader';
-import AddingButton from '../components/AddingButton';
+import CustomDropdown from '../../ui/CustomDropdown.jsx';
+import TextArea from '../../ui/TextArea.jsx';
+import SectionHeader from '../SectionHeader.jsx';
+import AddingButton from '../AddingButton.jsx';
 
 const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 const languages = ['Английский', 'Немецкий', 'Французский', 'Испанский', 'Итальянский', 'Китайский', 'Японский'];
@@ -89,7 +89,7 @@ export default function SkillsSection({ control, errors }) {
           {/* {errors.languages?.[index]?.level && <p className="error">{errors.languages[index].level.message}</p>} */}
           </div>
           <button className="delete-button" onClick={() => remove(index)}>
-            <img src="src/assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+            <img src="../../../assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
             </button>
         </div>
         </div>

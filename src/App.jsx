@@ -1,7 +1,7 @@
 import './App.css'
-import ResumeForm from './resume-form/ResumeForm';
+import ResumeForm from './components/form/ResumeForm.jsx';
 import React from "react";
-import ResumeRenderer from "./components/ResumeRenderer";
+import ResumeRenderer from "./components/templates/ResumeRenderer.jsx";
 import {demoResumeData} from "./data/demoResumeData";
 
 function App() {

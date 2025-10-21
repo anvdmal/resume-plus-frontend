@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { useFieldArray, Controller } from 'react-hook-form';
-import InputField from '../../components/ui/InputField';
-import CustomDropdown from '../../components/ui/CustomDropdown';
-import SectionHeader from '../components/SectionHeader';
-import AddingButton from '../components/AddingButton';
+import InputField from '../../ui/InputField.jsx';
+import CustomDropdown from '../../ui/CustomDropdown.jsx';
+import SectionHeader from '../SectionHeader.jsx';
+import AddingButton from '../AddingButton.jsx';
 
 const currentYear = new Date().getFullYear();
 const years = Array.from({ length: currentYear - 1950 + 1 }, (_, i) => 1950 + i).map(String);
 
-export default function AdditionalEducationSection({ control, errors }) {
+export default function AdditionalEducationSection({ control }) {
   const { fields, append, remove } = useFieldArray({ control, name: 'additionalEducation' });
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function AdditionalEducationSection({ control, errors }) {
           {/* {errors.additionalEducation?.[index]?.year && <p className="error">{errors.additionalEducation[index].year.message}</p>} */}
           </div>
           <button className="delete-button" onClick={() => remove(index)}>
-            <img src="src/assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+            <img src="../../../assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
             </button>
           
         </div>

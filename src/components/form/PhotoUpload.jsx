@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import '../styles/ui/PhotoUpload.css'; 
-import icEditPhoto from '../assets/ic_edit_photo.svg';
-import icRemovePhoto from '../assets/ic_remove_photo.svg';
+import '../../styles/ui/PhotoUpload.css';
+import icEditPhoto from '../../assets/ic_edit_photo.svg';
+import icRemovePhoto from '../../assets/ic_remove_photo.svg';
 
 export default function PhotoUpload({ name, control, setPhotoPreview }) {
   const [localPreview, setLocalPreview] = useState(null);

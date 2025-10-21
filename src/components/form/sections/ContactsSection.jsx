@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useFieldArray, Controller, useWatch } from 'react-hook-form';
-import InputField from '../../components/ui/InputField.jsx';
-import CustomDropdown from '../../components/ui/CustomDropdown';
-import SectionHeader from '../components/SectionHeader.jsx';
-import OptionButtonReversed from '../components/OptionButtonReversed.jsx';
-import AddingButton from '../components/AddingButton.jsx';
+import InputField from '../../ui/InputField.jsx';
+import CustomDropdown from '../../ui/CustomDropdown.jsx';
+import SectionHeader from '../SectionHeader.jsx';
+import OptionButtonReversed from '../OptionButtonReversed.jsx';
+import AddingButton from '../AddingButton.jsx';
 
 
 const socialNetworks = [
@@ -27,7 +27,6 @@ function SocialSection({ control, errors, index, onRemove }) {
     defaultValue: '',
   });
 
-  const platformError = errors?.socialLinks?.[index]?.platform;
   const linkError = errors?.socialLinks?.[index]?.link;
 
   return (
@@ -47,7 +46,7 @@ function SocialSection({ control, errors, index, onRemove }) {
             onRemove();
           }}
         >
-          <img src="src/assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+          <img src="../../../assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
         </button>
       </div>
       {isOpen && (

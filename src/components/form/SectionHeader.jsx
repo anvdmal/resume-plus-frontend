@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HintModal from './HintModal';
+import HintModal from './HintModal.jsx';
 import HintIcon from '../../assets/ic-hint-lamp.svg';
 
 export default function SectionHeader({ iconSrc, title, hints = [] }) {

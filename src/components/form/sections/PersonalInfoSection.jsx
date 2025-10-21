@@ -1,11 +1,11 @@
 import React from 'react';
 import { Controller } from 'react-hook-form';
-import InputField from '../../components/ui/InputField.jsx';
-import PhotoUpload from '../PhotoUpload';
-import SectionHeader from '../components/SectionHeader.jsx';
-import DatePickerField from '../components/DatePickerField.jsx';
+import InputField from '../../ui/InputField.jsx';
+import PhotoUpload from '../PhotoUpload.jsx';
+import SectionHeader from '../SectionHeader.jsx';
+import DatePickerField from '../DatePickerField.jsx';
 
-export default function PersonalInfoSection({ control, errors }) {
+export default function PersonalInfoSection({ control }) {
   return (
     <section className="personal-info-section section">
       <SectionHeader 

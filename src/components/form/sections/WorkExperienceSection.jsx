@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useFieldArray, Controller, useWatch } from 'react-hook-form';
-import InputField from '../../components/ui/InputField';
-import TextArea from '../../components/ui/TextArea';
-import MainButton from '../../components/ui/MainButton';
-import OptionButtonReversed from '../components/OptionButtonReversed';
-import DatePickerField from '../components/DatePickerField';
-import SectionHeader from '../components/SectionHeader';
-import AddingButton from '../components/AddingButton';
+import InputField from '../../ui/InputField.jsx';
+import TextArea from '../../ui/TextArea.jsx';
+import OptionButtonReversed from '../OptionButtonReversed.jsx';
+import DatePickerField from '../DatePickerField.jsx';
+import SectionHeader from '../SectionHeader.jsx';
+import AddingButton from '../AddingButton.jsx';
 
 
 function WorkExperienceItem({ control, errors, index, onRemove }) {
@@ -37,7 +36,7 @@ function WorkExperienceItem({ control, errors, index, onRemove }) {
             onRemove();
           }}
         >
-          <img src="src/assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+          <img src="../../../assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
         </button>
       </div>
       {isOpen && (

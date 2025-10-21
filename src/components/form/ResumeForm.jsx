@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { resumeSchema } from './schema';
-import MainButton from '../components/ui/MainButton.jsx';
-import PersonalInfoSection from './sections/PersonalInfoSection';
-import ContactsSection from './sections/ContactsSection';
-import EducationSection from './sections/EducationSection';
-import WorkExperienceSection from './sections/WorkExperienceSection';
-import AdditionalEducationSection from './sections/AdditionalEducationSection';
-import SkillsSection from './sections/SkillsSection';
-import '../styles/ui/ResumeForm.css';
+import { resumeSchema } from './schema.js';
+import MainButton from '../ui/MainButton.jsx';
+import PersonalInfoSection from './sections/PersonalInfoSection.jsx';
+import ContactsSection from './sections/ContactsSection.jsx';
+import EducationSection from './sections/EducationSection.jsx';
+import WorkExperienceSection from './sections/WorkExperienceSection.jsx';
+import AdditionalEducationSection from './sections/AdditionalEducationSection.jsx';
+import SkillsSection from './sections/SkillsSection.jsx';
+import '../../styles/ui/ResumeForm.css';
 
 export default function ResumeForm() {
   
