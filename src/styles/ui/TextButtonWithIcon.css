@@ -1,0 +1,19 @@
+.text-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    font: var(--font-body-opensans-semibold-18);
+    color: var(--info-tan-100);
+}
+
+.text-button .icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.text-button.left {
+    flex-direction: row-reverse;
+}
