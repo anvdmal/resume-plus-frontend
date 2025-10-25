@@ -1,0 +1,32 @@
+.creation-stages-section {
+    width: 100vw;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    padding: 0 7.75rem;
+    box-sizing: border-box;
+
+    text-align: center;
+    background: var(--background-sunset-25); /*для демонстрации, цвет фона наследуется от фона страницы*/
+    /*background: transparent;*/
+}
+
+.creation-stages-section .section-title {
+    font: var(--font-heading-firasans-bold-32);
+    color: var(--text-dark-grey-100);
+    margin: 0;
+}
+
+.creation-stages-section .stages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
