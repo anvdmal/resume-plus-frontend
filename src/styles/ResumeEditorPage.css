@@ -1,24 +1,28 @@
 .resume-edit-page {
     display: grid;
-    grid-template-columns: 0.83fr 1.25fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 2rem;
     padding: 2rem;
-    background-color: #fafafa;
+    background-color: white;
     min-height: 100vh;
+    align-items: start;
 }
 
 .resume-edit-page-form {
     background: white;
-    padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
 .resume-edit-page-preview {
     position: sticky;
+    top: 2rem;
     align-self: flex-start;
     height: fit-content;
-    max-height: calc(100vh - 40px);
+    max-height: calc(100vh - 4rem);
     overflow: auto;
+    border-radius: 1rem;
+    border: 1px solid var(--primary-moonstone-100);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

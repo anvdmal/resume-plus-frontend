@@ -1,37 +1,28 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import '../../styles/ui/PhotoUpload.css';
 import icEditPhoto from '../../assets/ic_edit_photo.svg';
 import icRemovePhoto from '../../assets/ic_remove_photo.svg';
 
-export default function PhotoUpload({ name, value, setValue, setPhotoPreview }) {
+export default function PhotoUpload({value, onChange}) {
     const fileInputRef = useRef(null);
-    const [localPreview, setLocalPreview] = useState(value || null);
+    const [preview, setPreview] = useState(value || null);
 
     useEffect(() => {
-        setLocalPreview(value || null);
+        setPreview(value || null);
     }, [value]);
 
     const handleChange = (e) => {
         const file = e.target.files[0];
         if (file) {
             const url = URL.createObjectURL(file);
-            setLocalPreview(url);
-            setPhotoPreview && setPhotoPreview(url);
-            setValue(name, url, { shouldValidate: true });
+            setPreview(url);
+            onChange(url);
         }
     };
 
-    const handleEdit = () => {
-        setLocalPreview(null);
-        setValue(name, null, { shouldValidate: false });
-        setPhotoPreview(null);
-        if (fileInputRef.current) fileInputRef.current.value = '';
-    };
-
-    const handleDelete = () => {
-        setLocalPreview(null);
-        setValue(name, null, { shouldValidate: false });
-        setPhotoPreview(null);
+    const handleRemove = () => {
+        setPreview(null);
+        onChange(null);
         if (fileInputRef.current) fileInputRef.current.value = '';
     };
 
@@ -42,30 +33,46 @@ export default function PhotoUpload({ name, value, setValue, setPhotoPreview }) 
     return (
         <div className="photo-upload">
             <div className="photo-container">
-                {localPreview && <img src={localPreview} alt="Фото профиля" className="photo-preview"/>}
-                {!localPreview && (
+                {preview ? (
+                    <>
+                        <img src={preview} alt="Фото профиля" className="photo-preview"/>
+                        <div className="photo-actions">
+                            <button
+                                className="photo-action edit"
+                                onClick={handleCustomButtonClick}
+                                aria-label="Edit photo"
+                            >
+                                <img src={icEditPhoto} alt="Edit" className="action-icon"/>
+                            </button>
+                            <button
+                                className="photo-action delete"
+                                onClick={handleRemove}
+                                aria-label="Delete photo"
+                            >
+                                <img src={icRemovePhoto} alt="Delete" className="action-icon"/>
+                            </button>
+                        </div>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            ref={fileInputRef}
+                            onChange={handleChange}
+                            style={{display: 'none'}}
+                        />
+                    </>
+                ) : (
                     <>
                         <input
                             type="file"
                             accept="image/*"
-                            onChange={handleChange}
                             ref={fileInputRef}
-                            style={{ display: 'none' }}
+                            onChange={handleChange}
+                            style={{display: 'none'}}
                         />
                         <button className="custom-upload-button" onClick={handleCustomButtonClick}>
                             Выбрать файл
                         </button>
                     </>
-                )}
-                {localPreview && (
-                    <div className="photo-actions">
-                        <button className="photo-action edit" onClick={handleEdit} aria-label="Edit photo">
-                            <img src={icEditPhoto} alt="Edit photo" className="action-icon"/>
-                        </button>
-                        <button className="photo-action delete" onClick={handleDelete} aria-label="Delete photo">
-                            <img src={icRemovePhoto} alt="Remove photo" className="action-icon"/>
-                        </button>
-                    </div>
                 )}
             </div>
         </div>

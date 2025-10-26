@@ -32,4 +32,6 @@
     --text-dark-grey-50: rgba(63, 63, 63, 0.5);
     --text-dark-grey-75: rgba(63, 63, 63, 0.75);
     --text-dark-grey-100: rgba(63, 63, 63, 1);
+
+    --background-grey: rgb(244, 246, 248);
 }

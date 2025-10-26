@@ -6,7 +6,7 @@ import SectionHeader from '../SectionHeader.jsx';
 import DatePickerField from '../DatePickerField.jsx';
 import '../../../styles/PersonalInfoSection.css';
 
-export default function PersonalInfoSection({control, setValue, setPhotoPreview}) {
+export default function PersonalInfoSection({control}) {
     return (
         <section className="personal-info-section section">
             <SectionHeader
@@ -18,32 +18,34 @@ export default function PersonalInfoSection({control, setValue, setPhotoPreview}
                     <Controller
                         name="photo"
                         control={control}
-                        render={({field}) => (
-                            <PhotoUpload
-                                name="photo"
-                                value={field.value}
-                                setValue={setValue}
-                                setPhotoPreview={setPhotoPreview}
-                            />
+                        render={({field: {value, onChange}}) => (
+                            <PhotoUpload value={value} onChange={onChange}/>
                         )}
                     />
                 </div>
+
                 <div className="fields-column">
                     <div className="group-column">
                         <Controller
                             name="firstName"
                             control={control}
-                            render={({field}) => <InputField placeholder="Имя" variant="gray" {...field} />}
+                            render={({field}) => (
+                                <InputField placeholder="Имя" variant="gray" {...field} />
+                            )}
                         />
                         <Controller
                             name="lastName"
                             control={control}
-                            render={({field}) => <InputField placeholder="Фамилия" variant="gray" {...field} />}
+                            render={({field}) => (
+                                <InputField placeholder="Фамилия" variant="gray" {...field} />
+                            )}
                         />
                         <Controller
                             name="middleName"
                             control={control}
-                            render={({field}) => <InputField placeholder="Отчество" variant="gray" {...field} />}
+                            render={({field}) => (
+                                <InputField placeholder="Отчество" variant="gray" {...field} />
+                            )}
                         />
                     </div>
                     <div className="group-column">
@@ -56,12 +58,16 @@ export default function PersonalInfoSection({control, setValue, setPhotoPreview}
                         <Controller
                             name="country"
                             control={control}
-                            render={({field}) => <InputField placeholder="Страна" variant="gray" {...field} />}
+                            render={({field}) => (
+                                <InputField placeholder="Страна" variant="gray" {...field} />
+                            )}
                         />
                         <Controller
                             name="city"
                             control={control}
-                            render={({field}) => <InputField placeholder="Город" variant="gray" {...field} />}
+                            render={({field}) => (
+                                <InputField placeholder="Город" variant="gray" {...field} />
+                            )}
                         />
                     </div>
                 </div>
