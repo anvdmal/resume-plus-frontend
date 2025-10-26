@@ -72,16 +72,15 @@
     }
 
     .fields-column {
-        max-width: 600px; /* Уменьшаем ширину для планшетов */
+        max-width: 600px;
     }
 
     .group-column {
-        grid-template-columns: 1fr 1fr; /* Сохраняем две колонки */
+        grid-template-columns: 1fr 1fr;
         gap: 0.75rem;
     }
 }
 
-/* Маленькие экраны (мобильные, до 768px) */
 @media (max-width: 768px) {
     .personal-info-section {
         padding: 1rem;
@@ -106,12 +105,11 @@
     }
 
     .group-column {
-        grid-template-columns: 1fr; /* Одна колонка для мобильных */
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 }
 
-/* Сверхмалые экраны (до 480px) */
 @media (max-width: 480px) {
     .personal-info-section {
         padding: 0.75rem;

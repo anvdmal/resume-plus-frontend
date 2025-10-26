@@ -79,7 +79,7 @@ const ResumeTemplate = ({data = {}, template = "default"}) => {
                         <ul>
                             {Object.entries(skills.driverCategories || {}).map(
                                 ([cat, has]) =>
-                                    has && <li key={cat}>Категория {cat}</li>
+                                    has && <li key={cat}>Водительские права категории {cat}</li>
                             )}
                             {skills.medicalSkills && <li>Медицинская книжка</li>}
                             {skills.militarySkills && <li>Военный билет</li>}

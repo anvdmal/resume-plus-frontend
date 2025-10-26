@@ -1,7 +1,6 @@
 .resume-template {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 1.25rem;
     max-width: 1000px;
     margin: 2.5rem auto;
     font-family: "Inter", sans-serif;
@@ -20,8 +19,11 @@
     background: var(--primary-moonstone-100);
     color: #fff;
     padding: 1.5rem 2rem;
-    flex-wrap: wrap;
     box-sizing: border-box;
+}
+
+.resume-header h1 {
+    flex-wrap: wrap;
 }
 
 .avatar {
@@ -81,6 +83,11 @@
 
 .sidebar a {
     color: var(--primary-moonstone-100);
+}
+
+.sidebar ul {
+    padding: 1rem;
+    margin: 0
 }
 
 .main-content {

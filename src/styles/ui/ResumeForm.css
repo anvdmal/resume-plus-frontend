@@ -107,7 +107,6 @@
     cursor: pointer;
 }
 
-
 .group-column {
     display: flex;
     flex-direction: column;
@@ -127,8 +126,9 @@
 
 .group {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.5rem;
     flex: 0;
     width: 100%;
@@ -139,7 +139,12 @@
     display: flex;
     flex: 1;
     gap: 0;
+}
 
+.driver-categories-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .dropdown-container, .input-container, .input-container > * {
@@ -197,7 +202,6 @@
     justify-self: start;
 }
 
-
 .delete-button {
     background-color: transparent;
     border: none;
@@ -214,13 +218,11 @@
     outline: none;
 }
 
-
 .cancel-icon {
     width: 0.8rem;
     height: 0.8rem;
 
 }
-
 
 .add-edu-group {
     display: flex;
@@ -234,7 +236,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 

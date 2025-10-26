@@ -10,6 +10,7 @@
     background-color: white;
     color: var(--text-dark-grey-75);
     border: 1px solid var(--text-dark-grey-75);
+    margin: 0
 }
 
 .gray::placeholder {
