@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { resumeSchema } from './schema.js';
-import { demoResumeData } from '../../data/demoResumeData.js';
-import { mapResumeDataToForm } from '../../utils/mapResumeData.jsx';
+import React, {useEffect} from 'react';
+import {useForm} from 'react-hook-form';
+import {yupResolver} from '@hookform/resolvers/yup';
+import {resumeSchema} from './schema.js';
+import {demoResumeData} from '../../data/demoResumeData.js';
+import {mapFormToResumeData, mapResumeDataToForm} from '../../utils/mapResumeData.jsx';
+
 import MainButton from '../ui/MainButton.jsx';
 import PersonalInfoSection from './sections/PersonalInfoSection.jsx';
 import ContactsSection from './sections/ContactsSection.jsx';
@@ -13,35 +14,33 @@ import AdditionalEducationSection from './sections/AdditionalEducationSection.js
 import SkillsSection from './sections/SkillsSection.jsx';
 import '../../styles/ui/ResumeForm.css';
 
-export default function ResumeForm({ onSubmitForm }) {
-    const { control, handleSubmit, formState: { errors }, watch, reset } = useForm({
+export default function ResumeForm({onSubmitForm}) {
+    const {control, handleSubmit, formState: {errors}, reset} = useForm({
         mode: 'onBlur',
         resolver: yupResolver(resumeSchema),
         defaultValues: mapResumeDataToForm(demoResumeData),
     });
 
-    const watchedData = watch();
-
-    useEffect(() => {
-        onSubmitForm(watchedData);
-    }, [watchedData, onSubmitForm]);
-
     useEffect(() => {
         reset(mapResumeDataToForm(demoResumeData));
     }, [reset]);
 
-    const onSubmit = (data) => onSubmitForm(data);
+    const onSubmit = (data) => {
+        const resumeData = mapFormToResumeData(data);
+        onSubmitForm(resumeData);
+    };
 
     return (
         <div className="resume-page">
             <form onSubmit={handleSubmit(onSubmit)} className="resume-form">
-                <PersonalInfoSection control={control} errors={errors} />
-                <ContactsSection control={control} errors={errors} />
-                <WorkExperienceSection control={control} errors={errors} />
-                <EducationSection control={control} errors={errors} />
-                <AdditionalEducationSection control={control} errors={errors} />
-                <SkillsSection control={control} errors={errors} />
-                <MainButton text="Создать резюме" variant="rose" />
+                <PersonalInfoSection control={control} errors={errors}/>
+                <ContactsSection control={control} errors={errors}/>
+                <WorkExperienceSection control={control} errors={errors}/>
+                <EducationSection control={control} errors={errors}/>
+                <AdditionalEducationSection control={control} errors={errors}/>
+                <SkillsSection control={control} errors={errors}/>
+
+                <MainButton text="Создать резюме" variant="rose"/>
             </form>
         </div>
     );

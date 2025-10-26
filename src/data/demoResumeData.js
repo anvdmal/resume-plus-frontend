@@ -13,9 +13,9 @@ export const demoResumeData = {
         phone: "+7 (999) 123-45-67",
         email: "anna.kovalenko@example.com",
         social: [
-            {type: "Telegram", link: "https://t.me/annadev"},
-            {type: "Github", link: "https://github.com/annadev"},
-            {type: "LinkedIn", link: "https://linkedin.com/in/anna-kovalenko"}
+            { type: "Telegram", link: "https://t.me/annadev" },
+            { type: "Github", link: "https://github.com/annadev" },
+            { type: "LinkedIn", link: "https://linkedin.com/in/anna-kovalenko" }
         ]
     },
     experience: [
@@ -36,7 +36,8 @@ export const demoResumeData = {
             city: "Москва",
             startDate: "2020-03",
             endDate: "2021-05",
-            responsibilities: "Верстка компонентов, поддержка библиотеки компонентов, работа с Git."
+            responsibilities:
+                "Верстка компонентов, поддержка библиотеки компонентов, работа с Git."
         }
     ],
     education: [
@@ -49,25 +50,25 @@ export const demoResumeData = {
     ],
     additionalEducation: [
         {
-            title: "React-разработка",
-            organization: "Яндекс.Практикум",
+            course: "React-разработка",
+            provider: "Яндекс.Практикум",
             year: "2021",
             hasCertificate: true
         },
         {
-            title: "UX/UI-дизайн",
-            organization: "Skillbox",
+            course: "UX/UI-дизайн",
+            provider: "Skillbox",
             year: "2020",
             hasCertificate: false
         }
     ],
     skills: {
-        medicalBook: false,
-        militaryTicket: false,
-        driverLicense: ["B"],
+        medicalSkills: false,
+        militarySkills: false,
+        driverCategories: { B: true },
         languages: [
-            {language: "Английский", level: "B2"},
-            {language: "Немецкий", level: "A2"}
+            { language: "Английский", level: "B2" },
+            { language: "Немецкий", level: "A2" }
         ],
         personalQualities: "Ответственность, коммуникабельность, самоорганизация.",
         professionalSkills:
