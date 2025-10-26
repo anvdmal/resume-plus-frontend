@@ -49,20 +49,6 @@
     padding: 0;
 }
 
-.personal-info-layout {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    align-items: center;
-}
-
-.fields-column {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-}
-
-
 .preview-photo {
     width: 100px;
     height: 100px;

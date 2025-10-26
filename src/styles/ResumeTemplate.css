@@ -74,9 +74,13 @@
     font-size: 1.1rem;
 }
 
-.sidebar p {
+.sidebar p, li {
     font-size: 0.9rem;
     line-height: 1.4;
+}
+
+.sidebar a {
+    color: var(--primary-moonstone-100);
 }
 
 .main-content {

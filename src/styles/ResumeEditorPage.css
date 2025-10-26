@@ -1,6 +1,6 @@
 .resume-edit-page {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.83fr 1.25fr;
     gap: 2rem;
     padding: 2rem;
     background-color: #fafafa;

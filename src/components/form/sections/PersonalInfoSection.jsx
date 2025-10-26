@@ -11,7 +11,7 @@ export default function PersonalInfoSection({ control }) {
     <section className="personal-info-section section">
       <SectionHeader 
         iconSrc="src/assets/ic-personal-data.svg" 
-        title="Персональная информация" 
+        title="Личные данные"
       />
       <div className="personal-info-layout">
         <div className="photo-column">
