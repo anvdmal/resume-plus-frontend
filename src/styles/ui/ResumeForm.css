@@ -76,6 +76,8 @@
 
 .date-picker-gray {
     width: 100%;
+    color: var(--text-dark-grey-75);
+    border: 1px solid var(--text-dark-grey-75);
 }
 
 .date-picker {
