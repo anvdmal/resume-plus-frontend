@@ -1,34 +1,32 @@
-import React, {useState, useRef} from "react";
-import {debounce} from 'lodash';
+import React, { useState } from "react";
+import { debounce } from 'lodash';
 import ResumeForm from "../components/form/ResumeForm.jsx";
 import ResumeRenderer from "../components/templates/ResumeRenderer.jsx";
-import {demoResumeData} from "../data/demoResumeData.js";
-import {mapFormToResumeData} from "../utils/mapResumeData.jsx";
+import { demoResumeData } from "../data/demoResumeData.js";
 import "../styles/ResumeEditorPage.css";
 
-const debouncedHandleFormChange = debounce((formData, prevDataRef, setResumeData) => {
-    const formattedData = mapFormToResumeData(formData);
-    const prevData = prevDataRef.current;
-    if (JSON.stringify(prevData) !== JSON.stringify(formattedData)) {
-        prevDataRef.current = formattedData;
-        setResumeData(formattedData);
-    }
+const debouncedSetPreview = debounce((data, setState) => {
+    setState(data);
 }, 300);
 
 export default function ResumeEditorPage() {
     const [resumeData, setResumeData] = useState(demoResumeData);
-    const prevDataRef = useRef(resumeData);
 
-    const handleFormChange = (formData) => {
-        debouncedHandleFormChange(formData, prevDataRef, setResumeData);
+    const handlePreviewChange = (previewData) => {
+        debouncedSetPreview(previewData, setResumeData);
     };
 
-    console.log('Current resumeData:', resumeData);
+    const handleFormSubmit = (finalData) => {
+        console.log('Резюме отправлено:', finalData);
+    };
 
     return (
         <div className="resume-edit-page">
             <div className="resume-edit-page-form">
-                <ResumeForm onSubmitForm={handleFormChange}/>
+                <ResumeForm
+                    onPreviewChange={handlePreviewChange}
+                    onSubmitForm={handleFormSubmit}
+                />
             </div>
             <div className="resume-edit-page-preview">
                 <ResumeRenderer data={resumeData} template="modern"/>
