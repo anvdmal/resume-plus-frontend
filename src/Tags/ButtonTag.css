@@ -1,0 +1,26 @@
+.custom-button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--background-sunset-25);
+  color: var(--text-dark-grey-100);
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: var(--background-sunset-50);
+  color: var(--text-dark-grey-100);
+}
+
+.custom-button.active {
+  background-color: var(--primary-moonstone-75);
+  color: white;
+}
+
+.custom-button:active,
+.custom-button:focus {
+  outline: none; /* Убираем фокусный контур */
+  box-shadow: none; /* Убираем тень, если она есть */
+}
