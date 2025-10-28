@@ -5,4 +5,4 @@ function App() {
     return <ResumeEditPage />;
 }
 
-export default App;
+export default App
