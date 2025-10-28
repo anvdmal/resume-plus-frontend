@@ -1,12 +1,12 @@
 import React from 'react';
-import './Header.css';
+import '../style/Header.css';
 
 export default function Header({ variant = 'home' }) {
   return (
     <header className={`header header-${variant}`}>
       <div className="header-content">
         <div className="header-logo">
-          <img src="public/logo-icon.svg" alt="Resume+ Logo" className="logo-icon" />
+          <img src="../../public/logo-icon.svg" alt="Resume+ Logo" className="logo-icon" />
           <span className="logo-text">Резюме+</span>
         </div>
         {variant === 'main-screen' && (
