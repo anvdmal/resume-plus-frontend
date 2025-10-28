@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/Header.css';
+import '../styles/Header.css';
 
 export default function Header({ variant = 'home' }) {
   return (
