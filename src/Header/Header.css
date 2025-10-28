@@ -1,94 +1,94 @@
 .header {
-  padding: 1rem 0;
-  font: var(--font-caption-opensans-regular-16);
-  color: var(--text-dark-grey-100);
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background-color: transparent;
+    padding: 1rem 0;
+    font: var(--font-caption-opensans-regular-14);
+    color: var(--text-dark-grey-100);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: transparent;
 }
 
 .header-home,
 .header-secondary,
 .header-minimal {
-  background-color: transparent; 
+    background-color: transparent;
 }
 
 .header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: none;
-  margin: 0 1.5rem;
-  width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: none;
+    margin: 0 1.5rem;
+    width: auto;
 }
 
 .header-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .logo-icon {
-  width: 5rem;
-  height: 5rem;
+    width: 5rem;
+    height: 5rem;
 }
 
 .logo-text {
-  font: var(--font-accent-shantellsans-regular-40);
-  color: var(--primary-moonstone-100);
+    font: var(--font-accent-shantellsans-regular-40);
+    color: var(--primary-moonstone-100);
 }
 
 .header-nav {
-  display: flex;
-  gap: 2rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .nav-link {
-  color: var(--text-dark-grey-100);
-  text-decoration: none;
-  font-weight: normal;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
+    color: var(--text-dark-grey-100);
+    text-decoration: none;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
 .nav-link:hover {
-  color: var(--secondary-chine-rose-hover);
+    color: var(--secondary-chine-rose-75);
 }
 
 .dropdown-arrow {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 .header-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .action-link {
-  color: var(--text-dark-grey-100);
-  text-decoration: none;
+    color: var(--text-dark-grey-100);
+    text-decoration: none;
 }
 
 .action-link:hover {
-  color: var(--secondary-chine-rose-hover);
+    color: var(--secondary-chine-rose-75);
 }
 
 .action-button {
-  background-color: var(--info-tan-25);
-  color: var(--text-dark-grey-100);
-  border: 1px solid var(--info-tan-hover);
-  border-radius: 0.625rem;
-  padding: 0.5rem 1rem;
-  font: var(--font-caption-opensans-regular-16);
-  cursor: pointer;
+    background-color: var(--info-tan-25);
+    color: var(--text-dark-grey-100);
+    border: 1px solid var(--info-tan-75);
+    border-radius: 0.625rem;
+    padding: 0.5rem 1rem;
+    font: var(--font-caption-opensans-regular-14);
+    cursor: pointer;
 }
 
 .action-button:hover {
-  background-color: var(--info-tan-50);
+    background-color: var(--info-tan-50);
 }

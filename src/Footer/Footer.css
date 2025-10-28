@@ -1,9 +1,9 @@
 .footer {
     background-color: var(--info-tan-100);
     padding: 2rem 0;
-    font: var(--font-caption-opensans-regular-16);
+    font: var(--font-caption-opensans-regular-14);
     color: var(--text-dark-grey-75);
-    border-top: 1px solid var(--info-tan-hover);
+    border-top: 1px solid var(--info-tan-75);
     margin-top: 2rem;
     margin-bottom: 0;
     width: 100vw;
@@ -49,16 +49,15 @@
   }
 
   .footer-link:hover {
-    color: var(--secondary-chine-rose-hover);
+    color: var(--secondary-chine-rose-75);
   }
 
   .footer-link-bold {
     font-weight: bold;
   }
 
-  /* Добавьте это в глобальные стили (например, index.css или App.css), чтобы убрать нижний пробел от root */
   #root {
-    padding-bottom: 0; /* Убираем нижний padding от root */
+    padding-bottom: 0;
   }
 
 
