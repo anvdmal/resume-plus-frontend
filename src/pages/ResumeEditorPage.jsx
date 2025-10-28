@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { debounce } from 'lodash';
+import React, {useState} from "react";
+import {debounce} from 'lodash';
 import ResumeForm from "../components/form/ResumeForm.jsx";
 import ResumeRenderer from "../components/templates/ResumeRenderer.jsx";
-import { demoResumeData } from "../data/demoResumeData.js";
+import {demoResumeData} from "../data/demoResumeData.js";
 import "../styles/ResumeEditorPage.css";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
 
 const debouncedSetPreview = debounce((data, setState) => {
     setState(data);
@@ -21,16 +23,20 @@ export default function ResumeEditorPage() {
     };
 
     return (
-        <div className="resume-edit-page">
-            <div className="resume-edit-page-form">
-                <ResumeForm
-                    onPreviewChange={handlePreviewChange}
-                    onSubmitForm={handleFormSubmit}
-                />
+        <>
+            <Header variant="secondary"/>
+            <div className="resume-edit-page">
+                <div className="resume-edit-page-form">
+                    <ResumeForm
+                        onPreviewChange={handlePreviewChange}
+                        onSubmitForm={handleFormSubmit}
+                    />
+                </div>
+                <div className="resume-edit-page-preview">
+                    <ResumeRenderer data={resumeData} template="modern"/>
+                </div>
             </div>
-            <div className="resume-edit-page-preview">
-                <ResumeRenderer data={resumeData} template="modern"/>
-            </div>
-        </div>
+            <Footer/>
+        </>
     );
 }
