@@ -1,9 +1,9 @@
-import StageCard from "../components/StageCard.jsx";
-import DataIcon from "../assets/ic-data.svg";
-import ResultIcon from "../assets/ic-result.svg";
-import TemplateIcon from "../assets/ic-template.svg";
-import MainButton from "./ui/MainButton.jsx";
-import "../styles/CreationStagesSection.css"
+import StageCard from "../StageCard.jsx";
+import DataIcon from "../../assets/ic-data.svg";
+import ResultIcon from "../../assets/ic-result.svg";
+import TemplateIcon from "../../assets/ic-template.svg";
+import MainButton from "../ui/MainButton.jsx";
+import "../../styles/main_sections/CreationStagesSection.css"
 
 export default function CreationStagesSection() {
     return (

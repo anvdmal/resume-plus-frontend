@@ -1,6 +1,6 @@
 import React from "react";
-import MainButton from "../ui/MainButton";
-import "../../styles/sections/AiResumeSection.css";
+import MainButton from "../ui/MainButton.jsx";
+import "../../styles/main_sections/AiResumeSection.css";
 import aiPromoImage from "../../assets/ai-promo-image.svg";
 
 const AiResumeSection = () => {

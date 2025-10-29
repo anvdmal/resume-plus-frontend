@@ -1,7 +1,7 @@
-import Template1 from "../assets/img-template-one.png";
-import Template2 from "../assets/img-template-one.png"; //заменить на готовые шаблоны
-import Template3 from "../assets/img-template-one.png";
-import "../styles/TemplatesPreviewSection.css";
+import Template1 from "../../assets/img-template-one.png";
+import Template2 from "../../assets/img-template-one.png"; //заменить на готовые шаблоны
+import Template3 from "../../assets/img-template-one.png";
+import "../../styles/main_sections/TemplatesPreviewSection.css";
 
 export default function TemplatesPreviewSection() {
     return (
