@@ -1,14 +1,8 @@
-import React from "react";
-import "./App.css";
+import React, {useState} from "react";
+import CreationStagesSection from "./components/CreationStagesSection.jsx";
 
-import AiResumeSection from "./components/sections/AiResumeSection";
-
-function App() {
-  return (
-    <div>
-      <AiResumeSection />
-    </div>
-  );
+export default function App() {
+    return(
+        <CreationStagesSection/>
+    )
 }
-
-export default App;
