@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import CreationStagesSection from "./components/CreationStagesSection.jsx";
+import MainPage from "./pages/MainPage.jsx";
 
 export default function App() {
     return(
-        <CreationStagesSection/>
+        <MainPage/>
     )
 }
