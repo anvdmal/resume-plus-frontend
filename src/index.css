@@ -2,8 +2,6 @@
 @import "./variables/typography.css";
 body {
   margin: 0;
-  background-color: #f9f4ed;
-
   font-family: "Open Sans", sans-serif;
 }
 
