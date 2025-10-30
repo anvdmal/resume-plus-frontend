@@ -1,5 +1,4 @@
-.section {
-    display: flex;
+.lets-create-section {
     align-items: center;
     width: 100%;
     position: relative;
@@ -47,19 +46,14 @@
     position: absolute;
     top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%); 
-    width: 100%;
-    max-width: none;
-    display: flex; 
-    justify-content: center;
+    transform: translate(-50%, -50%);
     z-index: 1; 
 }
 
 .blob-image {
-    object-fit: contain; 
-     width: 150%;
+    max-width: 64rem;
+    max-height: 52rem;
 }
-
 
 @media (max-width: 768px) {
     .section {
@@ -75,5 +69,4 @@
         min-width: 60%;
         left: 50%;
     }
-
 }

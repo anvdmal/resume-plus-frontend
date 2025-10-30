@@ -2,11 +2,11 @@ import React from "react";
 import InputField from "../ui/InputField.jsx";
 import MainButton from "../ui/MainButton.jsx";
 import blobImage from "../../assets/background_blob.svg";
-import "../../styles/ui/LetsCreateResumeSection.css";
+import "../../styles/main_sections/LetsCreateResumeSection.css";
 
 export default function LetsCreateResumeSection() {
     return (
-        <section className="section">
+        <section className="lets-create-section">
             <div className="image">
                 <img 
                     src={blobImage} 
@@ -17,7 +17,7 @@ export default function LetsCreateResumeSection() {
             
             <div className="content">
                 <h1 className="title">
-                    Будущее работы начинается с твоего резюме.
+                    Будущее работы начинается с твоего резюме
                 </h1>
                 <p className="subtitle">
                     Используй Резюме+ и у тебя будет простой способ выделиться и покорить работодателей
