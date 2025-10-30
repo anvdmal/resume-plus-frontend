@@ -1,6 +1,7 @@
 .main-button {
     padding: 0.5rem 1rem;
     font: var(--font-body-opensans-regular-18);
+    border: none;
     border-radius: 0.625rem;
     width: auto;
     height: 3rem;
