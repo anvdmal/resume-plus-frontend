@@ -1,10 +1,9 @@
 .ai-section-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3.75rem;
-  padding: 3.125rem;
-  max-width: 68.75rem;
-  margin: 0 auto;
+  margin: 16rem auto 8rem;
 }
 
 .ai-section-text-content {
@@ -25,10 +24,6 @@
   color: var(--text-dark-grey-100);
   line-height: 1.6;
   margin-bottom: 1.5625rem;
-}
-
-.ai-section-image-content {
-  flex: 1;
 }
 
 .ai-section-image-content img {

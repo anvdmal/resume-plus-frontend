@@ -20,7 +20,7 @@ const AiResumeSection = () => {
           Получи резюме, которое зайдет работодателям!
         </p>
 
-        <MainButton text="Создать резюме при помощи АИ" variant="tan" />
+        <MainButton text="Создать резюме при помощи AI" variant="tan" />
       </div>
 
       <div className="ai-section-image-content">
