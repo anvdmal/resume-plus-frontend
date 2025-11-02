@@ -1,8 +1,6 @@
-import React, {useState} from "react";
-import MainPage from "./pages/MainPage.jsx";
+import React from "react";
+import SubscriptionPage from "./pages/SubscriptionPage.jsx";
 
 export default function App() {
-    return(
-        <MainPage/>
-    )
+  return <SubscriptionPage />;
 }
