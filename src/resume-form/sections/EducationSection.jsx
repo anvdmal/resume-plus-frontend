@@ -4,6 +4,7 @@ import InputField from '../../components/ui/InputField';
 import CustomDropdown from '../../components/ui/CustomDropdown.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
 import AddingButton from '../components/AddingButton.jsx';
+import { educationHints } from '../../tips/hints';
 
 const educationLevels = [
   'Среднее общее',
@@ -32,9 +33,7 @@ export default function EducationSection({ control, errors }) {
         <SectionHeader 
                 iconSrc="src/assets/ic-education.svg" 
                 title="Образование" 
-                hints={[
-                  'Советы'
-                ]} 
+                hints={educationHints}
               />
       {fields.map((field, index) => (
         <div key={field.id} className="section-item-transparent">

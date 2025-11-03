@@ -4,6 +4,7 @@ import CustomDropdown from '../../components/ui/CustomDropdown';
 import TextArea from '../../components/ui/TextArea';
 import SectionHeader from '../components/SectionHeader';
 import AddingButton from '../components/AddingButton';
+import { skillsHints } from '../../tips/hints';
 
 const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 const languages = ['Английский', 'Немецкий', 'Французский', 'Испанский', 'Итальянский', 'Китайский', 'Японский'];
@@ -22,7 +23,7 @@ export default function SkillsSection({ control, errors }) {
       <SectionHeader 
         iconSrc="src/assets/ic-skills.svg" 
         title="Навыки и компетенции" 
-        hints={['Советы']}
+        hints={skillsHints}
       />
 
       <div className="checkbox-group">
