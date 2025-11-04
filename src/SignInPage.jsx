@@ -3,6 +3,7 @@ import InputField from "./components/ui/InputField";
 import MainButton from "./components/ui/MainButton";
 import TextButtonWithIcon from "./components/ui/TextButtonWithIcon";
 import "./styles/SignUpAndInPages.css";
+import Header from "./components/Header";
 
 import googleIcon from "./assets/ic-google.svg";
 import hhIcon from "./assets/ic-hh.svg";
@@ -24,6 +25,8 @@ export default function SignUpPage() {
     };
 
     return (
+        <>
+        <Header variant="secondary" />
         <div className="signup-page">
             <div className="arrow-buttons">
                 <TextButtonWithIcon
@@ -94,5 +97,6 @@ export default function SignUpPage() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
