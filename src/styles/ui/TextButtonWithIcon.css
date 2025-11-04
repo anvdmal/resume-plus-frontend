@@ -6,7 +6,32 @@
     background: transparent;
     border: none;
     font: var(--font-body-opensans-semibold-18);
+    color: var(--info-tan-75);
+    padding: 0.5rem 1rem; 
+    border-radius: 0.625rem;
+    height: 3rem;
+    white-space: nowrap;
+}
+
+.text-button:focus,
+.text-button:active,
+.text-button:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.text-button.bordered {
+    border: 1px solid currentColor; 
+    background: transparent;
+}
+
+.text-button.tan {
     color: var(--info-tan-100);
+}
+
+.text-button.dark {
+    color: var(--text-dark-grey-100); 
 }
 
 .text-button .icon {
