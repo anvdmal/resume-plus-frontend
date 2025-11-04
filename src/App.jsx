@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import SignUpPage from './SignUpPage';
 import SignInPage from './SignInPage';
+/* import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx'; */
 function App() {
   return (
     <div className="App">
@@ -44,3 +46,14 @@ export default App;
 
 /* export default App
  */
+
+/* return (
+        <div>
+            <Header variant="main-screen"/>
+            <div style={{minHeight: '100vh'}}/>
+            <Footer/>
+        </div>
+    );
+}
+
+export default App; */
