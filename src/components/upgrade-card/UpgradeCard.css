@@ -1,4 +1,3 @@
-/* src/components/upgrade-card/UpgradeCard.css */
 .upgrade-card {
     background-color: white;
     border: 2px solid var(--success-vanilla-50);
@@ -15,19 +14,12 @@
 }
 
 .upgrade-text {
-    /* Используем указанную переменную для надписи */
     font: var(--font-caption-opensans-regular-16);
     color: var(--text-dark-grey-100);
     margin: 0;
     word-wrap: break-word;
 }
 
-/* Стили для кнопки */
-/* src/components/upgrade-card/UpgradeCard.css */
-
-/* ... остальные стили ... */
-
-/* Стили для кнопки "Прокачать резюме" */
 .upgrade-card .main-button {
     font: var(--font-body-opensans-semibold-18);
     width: 100%;
@@ -35,8 +27,6 @@
     padding: 0.75rem;
     justify-content: center;
     color: white;
-    /* Убираем черную обводку при фокусе и нажатии ТОЛЬКО для этой кнопки */
     outline: none !important;
-    /* Также убираем стандартную рамку браузера */
     border: none;
 }

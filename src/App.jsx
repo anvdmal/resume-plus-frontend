@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useRef } from 'react';
 import Sidebar from './components/sidebar/Sidebar';
 import ImportCard from './components/import-card/ImportCard';
@@ -98,7 +97,7 @@ function App() {
                 <input type="file" ref={pdfInputRef} accept=".pdf" style={{ display: 'none' }} onChange={onPDFFileChange} />
                 <input type="file" ref={jsonInputRef} accept=".json" style={{ display: 'none' }} onChange={onJSONFileChange} />
             </main>
-            <Footer /> {/* ← вынесено сюда */}
+            <Footer /> {}
         </div>
     );
 }
