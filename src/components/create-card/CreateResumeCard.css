@@ -1,7 +1,7 @@
 .create-resume-card {
     aspect-ratio: 1;
-    max-width: 200px; /* ← ограничиваем ширину */
-    max-height: 200px; /* ← ограничиваем высоту */
+    max-width: 200px;
+    max-height: 200px;
     padding: 16px;
     border-radius: 12px;
     cursor: pointer;

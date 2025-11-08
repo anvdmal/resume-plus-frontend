@@ -6,8 +6,10 @@ import HomeIcon from '../../assets/ic-home.svg?raw';
 import FileIcon from '../../assets/ic-file.svg?raw';
 import SearchIcon from '../../assets/ic-search.svg?raw';
 
+import UpgradeCard from '../upgrade-card/UpgradeCard';
+
 const Sidebar = () => {
-    const [activeTab, setActiveTab] = useState('home'); // ← по умолчанию "Главная"
+    const [activeTab, setActiveTab] = useState('home');
 
     const getIcon = (iconName) => {
         switch (iconName) {
@@ -52,6 +54,11 @@ const Sidebar = () => {
                 {renderNavItem('files', 'Мои файлы', 'files')}
                 {renderNavItem('search', 'Поиск работы', 'search')}
             </nav>
+
+            {}
+            <div className="sidebar-upgrade-section">
+                <UpgradeCard />
+            </div>
         </aside>
     );
 };

@@ -1,4 +1,3 @@
-// src/components/create-card/CreateResumeCard.jsx
 import React from 'react';
 import './CreateResumeCard.css';
 

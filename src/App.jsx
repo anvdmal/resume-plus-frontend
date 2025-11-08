@@ -3,8 +3,9 @@ import { useRef } from 'react';
 import Sidebar from './components/sidebar/Sidebar';
 import ImportCard from './components/import-card/ImportCard';
 import CreateResumeCard from './components/create-card/CreateResumeCard';
-import './components/Layout.css'; // ← просто импортируем CSS
-import './App.css'; // ← остаётся без изменений!
+import Footer from './components/footer/Footer';
+import './components/Layout.css';
+import './App.css';
 
 function App() {
     const pdfInputRef = useRef(null);
@@ -42,7 +43,6 @@ function App() {
     return (
         <div className="app-container">
             <Sidebar />
-
             <main className="main-content">
                 <div className="content-wrapper">
                     <h1 className="greeting">Привет, Имя!</h1>
@@ -55,14 +55,14 @@ function App() {
                                 title="PDF"
                                 description="Загрузи свое старое резюме в формате .pdf и преобразуй его"
                                 onClick={handleImportPDF}
-                                backgroundColor="rgba(77, 167, 179, 0.25)" // ← primary-moonstone-25
+                                backgroundColor="rgba(77, 167, 179, 0.25)"
                             />
                             <ImportCard
                                 iconSrc="/ic-hh.svg"
                                 title="hh.ru"
                                 description="Быстро создай новое резюме благодаря импорту данных из hh.ru"
                                 onClick={handleImportJSON}
-                                backgroundColor="rgba(167, 89, 120, 0.25)" // ← secondary-chine-rose-25
+                                backgroundColor="rgba(167, 89, 120, 0.25)"
                             />
                         </div>
                     </section>
@@ -75,30 +75,30 @@ function App() {
                                 title="Конструктор резюме"
                                 description="Создавай и редактируй свои резюме при помощи ИИ"
                                 onClick={() => alert('Конструктор резюме')}
-                                backgroundColor="rgba(218, 183, 133, 0.25)" // ← info-tan-25
+                                backgroundColor="rgba(218, 183, 133, 0.25)"
                             />
                             <CreateResumeCard
                                 iconSrc="/ic-cover-letter.svg"
                                 title="Сопроводительное письмо"
                                 description="Дополни резюме – рекрутер точно обратит внимание"
                                 onClick={() => alert('Сопроводительное письмо')}
-                                backgroundColor="rgba(218, 183, 133, 0.25)" // ← info-tan-25
+                                backgroundColor="rgba(218, 183, 133, 0.25)"
                             />
                             <CreateResumeCard
                                 iconSrc="/ic-website-builder.svg"
                                 title="Конструктор сайта"
                                 description="Преврати свое резюме в персональный веб-сайт одним кликом"
                                 onClick={() => alert('Конструктор сайта')}
-                                backgroundColor="rgba(218, 183, 133, 0.25)" // ← info-tan-25
+                                backgroundColor="rgba(218, 183, 133, 0.25)"
                             />
                         </div>
                     </section>
-
                 </div>
 
                 <input type="file" ref={pdfInputRef} accept=".pdf" style={{ display: 'none' }} onChange={onPDFFileChange} />
                 <input type="file" ref={jsonInputRef} accept=".json" style={{ display: 'none' }} onChange={onJSONFileChange} />
             </main>
+            <Footer /> {/* ← вынесено сюда */}
         </div>
     );
 }

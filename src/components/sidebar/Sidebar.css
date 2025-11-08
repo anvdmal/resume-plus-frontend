@@ -1,4 +1,3 @@
-/* src/components/sidebar/Sidebar.css */
 .sidebar {
     position: fixed;
     top: 0;
@@ -6,8 +5,8 @@
     height: 100vh;
     width: 280px;
     background-color: white;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    /*box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);*/
+    z-index: 1000; /* Остается без изменений */
     padding: 24px 16px;
     display: flex;
     flex-direction: column;
@@ -22,8 +21,8 @@
 }
 
 .logo-icon {
-    width: 56px;   /* ← увеличили с 40px */
-    height: 56px;  /* ← увеличили с 40px */
+    width: 56px;
+    height: 56px;
 }
 
 .app-title {
@@ -77,8 +76,8 @@
     text-align: left;
     cursor: pointer;
     font: var(--font-heading-firasans-semibold-16);
-    color: var(--text-dark-grey-100); /* ← чёрный текст */
-    background-color: white; /* ← белый фон */
+    color: var(--text-dark-grey-100);
+    background-color: white;
     border: none;
     transition: background-color 0.2s;
     outline: none !important;
@@ -89,10 +88,31 @@
 }
 
 .nav-item.active {
-    background-color: var(--text-dark-grey-75); /* ← серый фон */
-    color: white; /* ← белый текст */
+    background-color: var(--text-dark-grey-75);
+    color: white;
 }
 
 .nav-item.active .nav-icon {
-    filter: brightness(0) invert(1); /* ← белая иконка */
+    filter: brightness(0) invert(1);
+}
+
+.sidebar-upgrade-section {
+    width: 100%;
+    /*margin-top: 24px;*/
+    /* УБИРАЕМ padding отсюда */
+    /* padding: 24px 16px; */
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+}
+
+/* Для адаптивности */
+@media (max-width: 768px) {
+    .sidebar-upgrade-section {
+        padding: 16px;
+        margin-top: 16px;
+    }
+
+    .upgrade-card {
+        max-width: 100%;
+    }
 }
