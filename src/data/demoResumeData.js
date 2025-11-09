@@ -13,9 +13,9 @@ export const demoResumeData = {
         phone: "+7 (999) 123-45-67",
         email: "anna.kovalenko@example.com",
         social: [
-            {type: "telegram", link: "https://t.me/annadev"},
-            {type: "github", link: "https://github.com/annadev"},
-            {type: "linkedin", link: "https://linkedin.com/in/anna-kovalenko"}
+            {type: "Telegram", link: "https://t.me/annadev"},
+            {type: "GitHub", link: "https://github.com/annadev"},
+            {type: "LinkedIn", link: "https://linkedin.com/in/anna-kovalenko"}
         ]
     },
     experience: [

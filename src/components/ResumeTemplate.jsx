@@ -7,36 +7,28 @@ const ResumeTemplate = ({data, template}) => {
     return (
         <div className={`resume-template resume-template--${template}`}>
             <header className="resume-header">
-                {personal.photo && <img src={personal.photo} alt="Фото" className="avatar"/>}
-                <div>
-                    <h1>{personal.firstName} {personal.lastName}</h1>
+                {personal.photo && (
+                    <img src={personal.photo} alt="Фото" className="avatar"/>
+                )}
+
+                <div className="info">
+                    <h1>
+                        {personal.firstName} {personal.lastName}
+                    </h1>
                     <p>{personal.desiredPosition}</p>
+                </div>
+
+                <div className="contacts">
+                    {contacts.social.map((s, i) => (
+                        <p key={i}>
+                            {s.type}: {s.link}
+                        </p>
+                    ))}
                 </div>
             </header>
 
-            <aside className="sidebar">
-                <section>
-                    <h3>Контакты</h3>
-                    {contacts.social.map((s, i) => (
-                        <p key={i}>{s.type}: {s.link}</p>
-                    ))}
-                </section>
-
-                <section>
-                    <h3>О себе</h3>
-                    <p>{skills.aboutMe}</p>
-                </section>
-
-                <section>
-                    <h3>Языки</h3>
-                    {skills.languages.map((l, i) => (
-                        <p key={i}>{l.language} — {l.level}</p>
-                    ))}
-                </section>
-            </aside>
-
             <main className="main-content">
-                <section>
+                <section className="education">
                     <h2>Образование</h2>
                     {education.map((e, i) => (
                         <div key={i}>
@@ -47,7 +39,14 @@ const ResumeTemplate = ({data, template}) => {
                     ))}
                 </section>
 
-                <section>
+                {skills.aboutMe && (
+                    <section className="aboutMe">
+                        <h2>О себе</h2>
+                        <p>{skills.aboutMe}</p>
+                    </section>
+                )}
+
+                <section className="experience">
                     <h2>Опыт работы</h2>
                     {experience.map((exp, i) => (
                         <div key={i}>
@@ -57,7 +56,28 @@ const ResumeTemplate = ({data, template}) => {
                         </div>
                     ))}
                 </section>
+
+                {skills.languages?.length > 0 && (
+                    <section className="languages">
+                        <h2>Языки</h2>
+                        {skills.languages.map((l, i) => (
+                            <p key={i}>{l.language} — {l.level}</p>
+                        ))}
+                    </section>
+                )}
+
+                {skills.list?.length > 0 && (
+                    <section className="skills">
+                        <h2>Навыки</h2>
+                        <ul>
+                            {skills.list.map((skill, i) => (
+                                <li key={i}>{skill}</li>
+                            ))}
+                        </ul>
+                    </section>
+                )}
             </main>
+
         </div>
     );
 };
