@@ -4,7 +4,7 @@
     max-width: 1000px;
     margin: 2.5rem auto;
     font-family: "Inter", sans-serif;
-    background: #fff;
+    background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 0.75rem;
     overflow: hidden;
@@ -58,7 +58,7 @@
 
 .sidebar h3 {
     margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid lightgray;
     padding-bottom: 4px;
     font: var(--font-heading-firasans-semibold-24)
 }
@@ -90,19 +90,17 @@
     font: var(--font-body-opensans-regular-18)
 }
 
-/* === MODERN TEMPLATE === */
-
 .resume-template--modern {
     grid-template-columns: 1fr 2fr;
 }
 
 .resume-template--modern .resume-header {
     background: var(--primary-moonstone-100);
-    color: #fff;
+    color: white;
 }
 
 .resume-template--modern .avatar {
-    border: 3px solid #fff;
+    border: 3px solid white;
 }
 
 .resume-template--modern .sidebar {
@@ -139,7 +137,7 @@
             var(--secondary-chine-rose-100),
             var(--primary-moonstone-100)
     );
-    color: #fff;
+    color: white;
     box-sizing: border-box;
 }
 
@@ -241,27 +239,164 @@
     color: var(--secondary-chine-rose-100);
 }
 
-.education {
+.resume-template--creative .education {
     grid-column: 1;
     grid-row: 2;
 }
 
-.aboutMe {
+.resume-template--creative.aboutMe {
     grid-column: 2;
     grid-row: 1;
 }
 
-.experience {
+.resume-template--creative.experience {
     grid-column: 1;
     grid-row: 1;
 }
 
-.languages {
+.resume-template--creative.languages {
     grid-column: 2;
     grid-row: 2;
 }
 
-.skills {
+.resume-template--creative.skills {
     grid-column: 2;
     grid-row: 3;
+}
+
+.resume-template--classic {
+    max-width: 59.375rem;
+    margin: 2rem auto;
+    background: white;
+    border: 1px solid lightgrey;
+    row-gap: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-template--classic .resume-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.5rem 2rem;
+    padding: 3rem 4rem;
+    border-bottom: 1px solid lightgrey;
+    align-items: start;
+}
+
+.resume-template--classic .avatar {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 10rem;
+    height: 11.875rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    border: 1px solid lightgrey;
+    align-self: start;
+}
+
+.resume-template--classic .info {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.resume-template--classic .contacts {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.resume-template--classic .resume-header h1 {
+    margin: 0 0 0.1875rem;
+    font: var(--font-heading-firasans-semibold-32);
+}
+
+.resume-template--classic .desired-position {
+    margin: 0 0 0.3125rem;
+    font: var(--font-body-opensans-regular-18);
+    opacity: 0.85;
+}
+
+.resume-template--classic .contacts h3 {
+    margin: 0 0 0.25rem;
+    font: var(--font-caption-opensans-semibold-14);
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.resume-template--classic .contacts p {
+    margin: 0.125rem 0;
+    font: var(--font-caption-opensans-regular-14);
+    opacity: 0.85;
+}
+
+
+.resume-template--classic .main-content {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 2rem;
+    padding: 0 2.5rem;
+    position: relative;
+    align-items: start;
+}
+
+.resume-template--classic .main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 35%;
+    width: 1px;
+    background: lightgrey;
+    height: 100%;
+    z-index: 1;
+}
+
+.resume-template--classic .education {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.resume-template--classic .aboutMe {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.resume-template--classic .experience {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.resume-template--classic .languages {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.resume-template--classic .skills {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.resume-template--classic .main-content section h2 {
+    font: var(--font-heading-firasans-semibold-24);
+    text-transform: uppercase;
+    margin: 0 0 0.375rem;
+}
+
+.resume-template--classic .main-content h3 {
+    font: var(--font-heading-firasans-semibold-20);
+    margin: 0.625rem 0 0.125rem;
+    opacity: 0.9;
+}
+
+.resume-template--classic .main-content p,
+.resume-template--classic .main-content li {
+    font: var(--font-body-opensans-regular-18);
+    opacity: 0.85;
+    margin: 0.125rem 0;
+    line-height: 1.5;
+}
+
+.resume-template--classic .main-content ul {
+    padding-left: 1rem;
+    margin: 0.1875rem 0;
 }
