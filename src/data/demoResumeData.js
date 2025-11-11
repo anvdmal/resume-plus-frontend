@@ -71,7 +71,7 @@ export const demoResumeData = {
         ],
         personalQualities: "Ответственность, коммуникабельность, самоорганизация.",
         professionalSkills:
-            "HTML5, CSS3, JavaScript (ES6+), React, Redux, Git, REST API, адаптивная верстка.",
+            "HTML5, CSS3, JavaScript (ES6+), React, Redux, Git, REST API, Адаптивная верстка",
         aboutMe:
             "Фронтенд-разработчик с опытом создания отзывчивых и доступных интерфейсов. Люблю разбираться в деталях и автоматизировать рутину."
     }

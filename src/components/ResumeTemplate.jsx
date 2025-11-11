@@ -2,7 +2,14 @@ import React from "react";
 import "../styles/ResumeTemplate.css";
 
 const ResumeTemplate = ({data, template}) => {
-    const {personal, contacts, experience, education, skills} = data;
+    const {
+        personal,
+        contacts,
+        experience,
+        education,
+        additionalEducation,
+        skills
+    } = data;
 
     return (
         <div className={`resume-template resume-template--${template}`}>
@@ -21,7 +28,15 @@ const ResumeTemplate = ({data, template}) => {
                 <div className="contacts">
                     {contacts.social.map((s, i) => (
                         <p key={i}>
-                            {s.type}: {s.link}
+                            {s.type}:{" "}
+                            <a
+                                href={s.link.trim()}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{color: "inherit", textDecoration: "none"}}
+                            >
+                                {s.link.trim()}
+                            </a>
                         </p>
                     ))}
                 </div>
@@ -39,6 +54,19 @@ const ResumeTemplate = ({data, template}) => {
                     ))}
                 </section>
 
+                {additionalEducation?.length > 0 && (
+                    <section className="additional-education">
+                        <h2>Дополнительное образование</h2>
+                        {additionalEducation.map((item, i) => (
+                            <div key={i}>
+                                <h3>{item.title}</h3>
+                                <p>{item.organization}, {item.year}</p>
+                                {item.hasCertificate && <p>Сертификат получен</p>}
+                            </div>
+                        ))}
+                    </section>
+                )}
+
                 {skills.aboutMe && (
                     <section className="aboutMe">
                         <h2>О себе</h2>
@@ -51,33 +79,56 @@ const ResumeTemplate = ({data, template}) => {
                     {experience.map((exp, i) => (
                         <div key={i}>
                             <h3>{exp.position} — {exp.company}</h3>
-                            <p>{exp.startDate} — {exp.endDate || "по наст. время"}</p>
+                            <p>
+                                {exp.startDate} — {exp.endDate || "по наст. время"}
+                            </p>
                             <p>{exp.responsibilities}</p>
                         </div>
                     ))}
                 </section>
 
+                {/* Языки */}
                 {skills.languages?.length > 0 && (
                     <section className="languages">
                         <h2>Языки</h2>
                         {skills.languages.map((l, i) => (
-                            <p key={i}>{l.language} — {l.level}</p>
+                            <p key={i}>
+                                {l.language} — {l.level}
+                            </p>
                         ))}
                     </section>
                 )}
 
-                {skills.list?.length > 0 && (
+                {skills.professionalSkills && (
                     <section className="skills">
-                        <h2>Навыки</h2>
+                        <h2>Профессиональные навыки</h2>
                         <ul>
-                            {skills.list.map((skill, i) => (
-                                <li key={i}>{skill}</li>
-                            ))}
+                            {skills.professionalSkills
+                                .split(", ")
+                                .map((skill, i) => (
+                                    <li key={i}>{skill.trim()}</li>
+                                ))}
                         </ul>
                     </section>
                 )}
-            </main>
 
+                {skills.personalQualities && (
+                    <section className="personal-qualities">
+                        <h2>Личные качества</h2>
+                        <p>{skills.personalQualities}</p>
+                    </section>
+                )}
+
+                {skills.driverLicense?.length > 0 && (
+                    <section className="driver-license">
+                        <h2>Водительские права</h2>
+                        <p>
+                            {skills.driverLicense.length === 1
+                                ? `Категория: ${skills.driverLicense[0]}`
+                                : `Категории: ${skills.driverLicense.join(", ")}`}
+                        </p></section>
+                )}
+            </main>
         </div>
     );
 };

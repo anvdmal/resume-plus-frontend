@@ -2,6 +2,7 @@
     display: grid;
     gap: 1.25rem;
     max-width: 1000px;
+    aspect-ratio: 1 / 1.414;
     margin: 2.5rem auto;
     font-family: "Inter", sans-serif;
     background: white;
@@ -73,7 +74,6 @@
 
 .main-content section {
     margin-top: 1.7rem;
-    margin-bottom: 2rem;
 }
 
 .main-content h2 {
@@ -239,29 +239,44 @@
     color: var(--secondary-chine-rose-100);
 }
 
+.resume-template--creative .experience {
+    grid-column: 1;
+    grid-row: 1;
+}
+
 .resume-template--creative .education {
     grid-column: 1;
     grid-row: 2;
 }
 
-.resume-template--creative.aboutMe {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.resume-template--creative.experience {
+.resume-template--creative .additional-education {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 3;
 }
 
-.resume-template--creative.languages {
+.resume-template--creative .personal-qualities {
     grid-column: 2;
     grid-row: 2;
 }
 
-.resume-template--creative.skills {
+.resume-template--creative .skills {
     grid-column: 2;
     grid-row: 3;
+}
+
+.resume-template--creative .languages {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.resume-template--creative .driver-license {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.resume-template--creative .aboutMe {
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .resume-template--classic {
@@ -329,7 +344,6 @@
     opacity: 0.85;
 }
 
-
 .resume-template--classic .main-content {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
@@ -337,6 +351,46 @@
     padding: 0 2.5rem;
     position: relative;
     align-items: start;
+}
+
+.resume-template--classic .skills {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.resume-template--classic .languages {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.resume-template--classic .driver-license {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.resume-template--classic .aboutMe {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.resume-template--classic .experience {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.resume-template--classic .education {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.resume-template--classic .additional-education {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.resume-template--classic .personal-qualities {
+    grid-column: 2;
+    grid-row: 4;
 }
 
 .resume-template--classic .main-content::before {
@@ -349,31 +403,6 @@
     background: lightgrey;
     height: 100%;
     z-index: 1;
-}
-
-.resume-template--classic .education {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.resume-template--classic .aboutMe {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.resume-template--classic .experience {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.resume-template--classic .languages {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.resume-template--classic .skills {
-    grid-column: 2;
-    grid-row: 3;
 }
 
 .resume-template--classic .main-content section h2 {
@@ -397,6 +426,7 @@
 }
 
 .resume-template--classic .main-content ul {
-    padding-left: 1rem;
+    padding-left: 2rem;
+    text-align: left;
     margin: 0.1875rem 0;
 }
