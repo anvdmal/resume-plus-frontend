@@ -6,7 +6,7 @@ import {demoResumeData} from "./data/demoResumeData";
 function App() {
     return (
         <div className="App">
-            <ResumeRenderer data={demoResumeData} template="creative"/>
+            <ResumeRenderer data={demoResumeData} template="modern"/>
         </div>
     );
 }

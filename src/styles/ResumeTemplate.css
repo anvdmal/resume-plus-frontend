@@ -91,25 +91,131 @@
 }
 
 .resume-template--modern {
-    grid-template-columns: 1fr 2fr;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    max-width: 950px;
+    margin: 2rem auto;
 }
 
 .resume-template--modern .resume-header {
+    grid-column: 1 / -1;
     background: var(--primary-moonstone-100);
     color: white;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.75rem 2rem;
 }
 
 .resume-template--modern .avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
     border: 3px solid white;
+    object-fit: cover;
 }
 
-.resume-template--modern .sidebar {
-    background: #f4f6f8;
+.resume-template--modern .info {
+    display: flex;
+    flex-direction: column;
 }
 
-.resume-template--modern .main-content h2 {
+.resume-template--modern .resume-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.resume-template--modern .resume-header p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+    opacity: 0.95;
+}
+
+.resume-template--modern .main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.resume-template--modern .main-content > .contacts,
+.resume-template--modern .main-content > .aboutMe,
+.resume-template--modern .main-content > .languages,
+.resume-template--modern .main-content > .personal-qualities,
+.resume-template--modern .main-content > .driver-license {
+    grid-column: 1;
+    background-color: #f8f9fa;
+    padding: 1.25rem;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.resume-template--modern .main-content > .experience,
+.resume-template--modern .main-content > .education,
+.resume-template--modern .main-content > .additional-education,
+.resume-template--modern .main-content > .skills {
+    grid-column: 2;
+    padding: 1.25rem;
+    margin: 0;
+}
+
+.resume-template--modern .main-content > .contacts {
+    grid-row: 1;
+}
+
+.resume-template--modern .main-content > .aboutMe {
+    grid-row: 2;
+}
+
+.resume-template--modern .main-content > .languages {
+    grid-row: 3;
+}
+
+.resume-template--modern .main-content > .skills {
+    grid-row: 4;
+}
+
+.resume-template--modern .main-content > .driver-license {
+    grid-row: 5;
+}
+
+.resume-template--modern .main-content > .experience {
+    grid-row: 1;
+}
+
+.resume-template--modern .main-content > .education {
+    grid-row: 2;
+}
+
+.resume-template--modern .main-content > .additional-education {
+    grid-row: 3;
+}
+
+.resume-template--modern .main-content > .personal-qualities {
+    grid-row: 4;
+}
+
+.resume-template--modern .main-content section h2 {
     color: var(--primary-moonstone-100);
+    font-size: 1rem;
+    text-transform: uppercase;
     border-bottom: 2px solid var(--primary-moonstone-100);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.resume-template--modern .main-content p,
+.resume-template--modern .main-content li {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0.2rem 0;
+}
+
+.resume-template--modern .skills ul {
+    margin: 0.5rem 0 0 1rem;
+    padding: 0;
 }
 
 .resume-template--creative {
