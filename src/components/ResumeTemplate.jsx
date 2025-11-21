@@ -72,15 +72,6 @@ const ResumeTemplate = ({data, template}) => {
                     </section>
                 )}
 
-                {skills.languages?.length > 0 && (
-                    <section className="languages">
-                        <h2>Языки</h2>
-                        {skills.languages.map((l, i) => (
-                            <p key={i}>{l.language} — {l.level}</p>
-                        ))}
-                    </section>
-                )}
-
                 {skills.professionalSkills && (
                     <section className="skills">
                         <h2>Профессиональные навыки</h2>
@@ -94,14 +85,27 @@ const ResumeTemplate = ({data, template}) => {
                     </section>
                 )}
 
-                {skills.driverLicense?.length > 0 && (
-                    <section className="driver-license">
-                        <h2>Водительские права</h2>
-                        <p>
-                            {skills.driverLicense.length === 1
-                                ? `Категория: ${skills.driverLicense[0]}`
-                                : `Категории: ${skills.driverLicense.join(", ")}`}
-                        </p>
+                {(skills.languages?.length > 0 || skills.driverLicense?.length > 0) && (
+                    <section className="languages-and-license">
+                        <h2>Дополнительный навыки</h2>
+
+                        {skills.languages?.length > 0 && (
+                            <div className="languages">
+                                {skills.languages.map((l, i) => (
+                                    <p key={i}>{l.language} — {l.level}</p>
+                                ))}
+                            </div>
+                        )}
+
+                        {skills.driverLicense?.length > 0 && (
+                            <div className="driver-license">
+                                <p>
+                                    {skills.driverLicense.length === 1
+                                        ? `Водительские права категории ${skills.driverLicense[0]}`
+                                        : `Водительские права категорий: ${skills.driverLicense.join(", ")}`}
+                                </p>
+                            </div>
+                        )}
                     </section>
                 )}
 
