@@ -28,7 +28,7 @@ export default function SignUpPage() {
     return (
         <>
         <Header variant="secondary" />
-        <div className="signup-page">
+        <div className="signupin-page">
             <div className="arrow-buttons">
                 <TextButtonWithIcon
                     text="Обратно"
@@ -44,8 +44,8 @@ export default function SignUpPage() {
                     color="tan"
                 />
             </div>
-            <div className="signup-container">
-                <form className="signup-form">
+            <div className="signupin-container">
+                <form className="signupin-form">
                     <h2>Создать аккаунт</h2>
                     <div className="input-fields">
                         <InputField
@@ -97,13 +97,13 @@ export default function SignUpPage() {
                         bordered={true}
                     />
                     
-                    <TextButtonWithIcon
+ {/*                   { <TextButtonWithIcon
                         text="Войти при помощи LinkedIn"
                         icon={linkedinIcon}
                         iconSide="left"
                         color="dark"
                         bordered={true}
-                    />
+                    />} */}
                 </div>
             </div>
         </div>

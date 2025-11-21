@@ -11,7 +11,7 @@ import linkedinIcon from "./assets/ic-linkedIn.svg";
 import backArrow from "./assets/ic-arrow-left.svg";
 import nextArrow from "./assets/ic-arrow-right.svg";
 
-export default function SignUpPage() {
+export default function SignInPage() {
     const [formData, setFormData] = useState({
         email: "",
         password: ""
@@ -27,7 +27,7 @@ export default function SignUpPage() {
     return (
         <>
         <Header variant="secondary" />
-        <div className="signup-page">
+        <div className="signupin-page">
             <div className="arrow-buttons">
                 <TextButtonWithIcon
                     text="Обратно"
@@ -43,8 +43,8 @@ export default function SignUpPage() {
                     color="tan"
                 />
             </div>
-            <div className="signup-container">
-                <form className="signup-form">
+            <div className="signupin-container">
+                <form className="signupin-form">
                     <h2>Войти</h2>
                     <div className="input-fields">
                         <InputField
@@ -86,14 +86,14 @@ export default function SignUpPage() {
                         color="dark"
                         bordered={true}
                     />
-                    
+{/*                     
                     <TextButtonWithIcon
                         text="Войти при помощи LinkedIn"
                         icon={linkedinIcon}
                         iconSide="left"
                         color="dark"
                         bordered={true}
-                    />
+                    /> */}
                 </div>
             </div>
         </div>
