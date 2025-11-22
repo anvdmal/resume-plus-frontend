@@ -1,6 +1,9 @@
 import React from "react";
 import SubscriptionPage from "./pages/SubscriptionPage.jsx";
+import SignUpPage from "./pages/SignUpPage.jsx";
+import SignInPage from "./pages/SignInPage.jsx";
+import MainPage from "./pages/MainPage.jsx";
 
 export default function App() {
-  return <SubscriptionPage />;
+  return <MainPage/>;
 }

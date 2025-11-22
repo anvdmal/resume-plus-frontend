@@ -1,6 +1,6 @@
 import React from "react";
 import SubscriptionCard from "../components/subscription/SubscriptionCard.jsx";
-import "../styles/SubscriptionPage.css";
+import "../styles/pages/SubscriptionPage.css";
 
 export default function SubscriptionPage() {
   return (

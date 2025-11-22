@@ -1,21 +1,20 @@
 import React, { useState } from "react";
-import InputField from "./components/ui/InputField";
-import MainButton from "./components/ui/MainButton";
-import TextButtonWithIcon from "./components/ui/TextButtonWithIcon";
-import "./styles/SignUpAndInPages.css";
-import Header from "./components/Header";
+import InputField from "../components/ui/InputField.jsx";
+import MainButton from "../components/ui/MainButton.jsx";
+import TextButtonWithIcon from "../components/ui/TextButtonWithIcon.jsx";
+import "../styles/pages/SignUpAndInPages.css";
+import Header from "../components/Header.jsx";
 
-import googleIcon from "./assets/ic-google.svg";
-import hhIcon from "./assets/ic-hh.svg";
-import linkedinIcon from "./assets/ic-linkedIn.svg";
-import backArrow from "./assets/ic-arrow-left.svg";
-import nextArrow from "./assets/ic-arrow-right.svg";
+import googleIcon from "../assets/ic-google.svg";
+import hhIcon from "../assets/ic-hh.svg";
+import linkedinIcon from "../assets/ic-linkedIn.svg";
+import backArrow from "../assets/ic-arrow-left.svg";
+import nextArrow from "../assets/ic-arrow-right.svg";
 
-export default function SignUpPage() {
+export default function SignInPage() {
     const [formData, setFormData] = useState({
         email: "",
-        password: "",
-        confirmPassword: ""
+        password: ""
     });
 
     const handleInputChange = (field) => (e) => {
@@ -38,7 +37,7 @@ export default function SignUpPage() {
                 />
                 
                 <TextButtonWithIcon
-                    text="Уже есть аккаунт?"
+                    text="Еще нет аккаунта?"
                     icon={nextArrow}
                     iconSide="right"
                     color="tan"
@@ -46,7 +45,7 @@ export default function SignUpPage() {
             </div>
             <div className="signupin-container">
                 <form className="signupin-form">
-                    <h2>Создать аккаунт</h2>
+                    <h2>Войти</h2>
                     <div className="input-fields">
                         <InputField
                             placeholder="Электронная почта"
@@ -54,33 +53,24 @@ export default function SignUpPage() {
                             value={formData.email}
                             onChange={handleInputChange("email")}
                         />
-
                         <InputField
                             placeholder="Пароль"
                             variant="gray"
                             value={formData.password}
                             type="password"
-                            onChange={handleInputChange("password")} 
-                        />
-
-                        <InputField
-                            placeholder="Подтвердите пароль"
-                            variant="gray"
-                            value={formData.confirmPassword}
-                            type="password"
-                            onChange={handleInputChange("confirmPassword")}
+                            onChange={handleInputChange("password")}
                         />
                     </div>
                     <MainButton
-                        text="Зарегистрироваться"
-                        variant="moonstone"
+                        text="Войти"
+                        variant="tan"
                         type="submit"
                     />
                 </form>
 
                 <div className="social-login">
                     <h2>или</h2>
-                    
+
                     <TextButtonWithIcon
                         text="Войти при помощи Google"
                         icon={googleIcon}
@@ -96,14 +86,14 @@ export default function SignUpPage() {
                         color="dark"
                         bordered={true}
                     />
-                    
- {/*                   { <TextButtonWithIcon
+{/*                     
+                    <TextButtonWithIcon
                         text="Войти при помощи LinkedIn"
                         icon={linkedinIcon}
                         iconSide="left"
                         color="dark"
                         bordered={true}
-                    />} */}
+                    /> */}
                 </div>
             </div>
         </div>

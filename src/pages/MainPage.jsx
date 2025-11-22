@@ -4,7 +4,7 @@ import LetsCreateResumeSection from "../components/main_sections/LetsCreateResum
 import AiResumeSection from "../components/main_sections/AiResumeSection.jsx";
 import CreationStagesSection from "../components/main_sections/CreationStagesSection.jsx";
 import TemplatesPreviewSection from "../components/main_sections/TemplatesPreviewSection.jsx";
-import "../styles/MainPage.css"
+import "../styles/pages/MainPage.css"
 import Footer from "../components/Footer.jsx";
 
 export default function MainPage() {
