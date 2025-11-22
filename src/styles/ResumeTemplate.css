@@ -363,7 +363,6 @@
 
 .resume-template--classic {
     max-width: 59.375rem;
-    margin: 2rem auto;
     background: white;
     border: 1px solid lightgrey;
     row-gap: 0;
@@ -382,7 +381,7 @@
 }
 
 .resume-template--classic .resume-header p {
-    font: var(--font-body-opensans-regular-18);
+    font: var(--font-caption-opensans-regular-14);
 }
 
 .resume-template--classic .avatar {
@@ -408,7 +407,7 @@
 
 .resume-template--classic .resume-header h1 {
     margin: 0 0 0.1875rem;
-    font: var(--font-heading-firasans-semibold-32);
+    font: var(--font-heading-firasans-semibold-24);
 }
 
 .resume-template--classic .desired-position {
@@ -434,7 +433,7 @@
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     gap: 2rem;
-    padding: 0 2.5rem;
+    padding: 0 1.5rem;
     position: relative;
     align-items: start;
 }
@@ -450,7 +449,7 @@
 }
 
 .resume-template--classic .aboutMe {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 3;
 }
 
@@ -465,7 +464,7 @@
 }
 
 .resume-template--classic .additional-education {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 3;
 }
 
@@ -487,27 +486,27 @@
 }
 
 .resume-template--classic .main-content section h2 {
-    font: var(--font-heading-firasans-semibold-24);
+    font: var(--font-heading-firasans-semibold-20);
     text-transform: uppercase;
     margin: 0 0 0.375rem;
 }
 
 .resume-template--classic .main-content h3 {
-    font: var(--font-heading-firasans-semibold-20);
+    font: var(--font-heading-firasans-semibold-16);
     margin: 0.625rem 0 0.125rem;
     opacity: 0.9;
 }
 
 .resume-template--classic .main-content p,
 .resume-template--classic .main-content li {
-    font: var(--font-body-opensans-regular-18);
+    font: var(--font-caption-opensans-regular-16);
     opacity: 0.85;
     margin: 0.125rem 0;
     line-height: 1.5;
 }
 
 .resume-template--classic .main-content ul {
-    padding-left: 2rem;
+    padding-left: 1rem;
     text-align: left;
     margin: 0.1875rem 0;
 }
