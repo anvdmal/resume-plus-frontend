@@ -93,8 +93,8 @@
     color: black;
     border: 1px solid lightgray;
     max-width: 950px;
-    margin: 2rem auto;
     gap: 0;
+    padding: 0
 }
 
 .resume-template--modern .resume-header {
@@ -133,7 +133,7 @@
 
 .resume-template--modern .main-content > .contacts,
 .resume-template--modern .main-content > .aboutMe,
-.resume-template--modern .main-content > .languages-and-license,
+.resume-template--modern .main-content > .additional-skills,
 .resume-template--modern .main-content > .personal-qualities {
     grid-column: 1;
     background-color: #f8f9fa;
