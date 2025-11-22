@@ -1,7 +1,7 @@
 export const mapFormToResumeData = (form) => ({
     personal: {
-        firstName: form.firstName,
-        lastName: form.lastName,
+        firstName: form.firstName || "",
+        lastName: form.lastName || "",
         middleName: form.middleName || "",
         desiredPosition: form.desiredPosition || "",
         birthDate: form.birthDate || "",
@@ -16,7 +16,7 @@ export const mapFormToResumeData = (form) => ({
         social:
             form.socialLinks?.map((s) => ({
                 type: s.platform,
-                link: s.link,
+                link: s.link?.trim() || "",
             })) || [],
     },
 
@@ -41,16 +41,24 @@ export const mapFormToResumeData = (form) => ({
 
     additionalEducation:
         form.additionalEducation?.map((a) => ({
-            course: a.course || "",
-            provider: a.provider || "",
+            title: a.course || "",
+            organization: a.provider || "",
             year: a.year || "",
-            hasCertificate: a.hasCertificate || false,
+            hasCertificate: !!a.hasCertificate,
         })) || [],
 
     skills: {
-        aboutMe: [form.personalQualities, form.professionalSkills, form.about]
+        aboutMe: [
+            form.personalQualities,
+            form.professionalSkills,
+            form.about
+        ]
             .filter(Boolean)
-            .join("\n\n"),
+            .join("\n\n")
+            .trim() || "",
+
+        personalQualities: form.personalQualities || "",
+        professionalSkills: form.professionalSkills || "",
 
         languages:
             form.languages?.map((l) => ({
@@ -58,9 +66,12 @@ export const mapFormToResumeData = (form) => ({
                 level: l.level || "",
             })) || [],
 
-        driverCategories: form.driverCategories || {},
-        medicalSkills: !!form.medicalSkills,
-        militarySkills: !!form.militarySkills,
+        driverLicense: Object.entries(form.driverCategories || {})
+            .filter(([, enabled]) => enabled)
+            .map(([category]) => category),
+
+        medicalBook: !!form.medicalBook,
+        militaryTicket: !!form.militaryTicket,
     },
 });
 
@@ -78,8 +89,8 @@ export const mapResumeDataToForm = (resume) => ({
     email: resume.contacts?.email || "",
     socialLinks:
         resume.contacts?.social?.map((s) => ({
-            platform: s.type,
-            link: s.link,
+            platform: s.type || "",
+            link: s.link?.trim() || "",
         })) || [{ platform: "", link: "" }],
 
     workExperience:
@@ -103,10 +114,10 @@ export const mapResumeDataToForm = (resume) => ({
 
     additionalEducation:
         resume.additionalEducation?.map((a) => ({
-            course: a.course || "",
-            provider: a.provider || "",
+            course: a.title || "",
+            provider: a.organization || "",
             year: a.year || "",
-            hasCertificate: a.hasCertificate || false,
+            hasCertificate: !!a.hasCertificate,
         })) || [],
 
     languages:
@@ -115,11 +126,20 @@ export const mapResumeDataToForm = (resume) => ({
             level: l.level || "",
         })) || [],
 
-    driverCategories: resume.skills?.driverCategories || {},
-    medicalSkills: !!resume.skills?.medicalSkills,
-    militarySkills: !!resume.skills?.militarySkills,
+    driverCategories: ["A", "B", "C", "D", "BE", "CE", "DE"].reduce(
+        (acc, cat) => {
+            acc[cat] = Array.isArray(resume.skills?.driverLicense)
+                ? resume.skills.driverLicense.includes(cat)
+                : false;
+            return acc;
+        },
+        {}
+    ),
 
-    personalQualities: resume.skills?.aboutMe?.split("\n\n")[0] || "",
-    professionalSkills: resume.skills?.aboutMe?.split("\n\n")[1] || "",
-    about: resume.skills?.aboutMe?.split("\n\n")[2] || "",
+    medicalBook: !!resume.skills?.medicalBook,
+    militaryTicket: !!resume.skills?.militaryTicket,
+
+    personalQualities: resume.skills?.personalQualities || "",
+    professionalSkills: resume.skills?.professionalSkills || "",
+    about: resume.skills?.aboutMe || "",
 });

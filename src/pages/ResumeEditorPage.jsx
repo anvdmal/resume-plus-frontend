@@ -33,7 +33,7 @@ export default function ResumeEditorPage() {
                     />
                 </div>
                 <div className="resume-edit-page-preview">
-                    <ResumeRenderer data={resumeData} template="modern"/>
+                    <ResumeRenderer data={resumeData} template="creative"/>
                 </div>
             </div>
             <Footer/>

@@ -13,9 +13,9 @@ export const demoResumeData = {
         phone: "+7 (999) 123-45-67",
         email: "anna.kovalenko@example.com",
         social: [
-            { type: "Telegram", link: "https://t.me/annadev" },
-            { type: "Github", link: "https://github.com/annadev" },
-            { type: "LinkedIn", link: "https://linkedin.com/in/anna-kovalenko" }
+            {type: "Telegram", link: "https://t.me/annadev"},
+            {type: "GitHub", link: "https://github.com/annadev"},
+            {type: "LinkedIn", link: "https://linkedin.com/in/anna-kovalenko"}
         ]
     },
     experience: [
@@ -36,8 +36,7 @@ export const demoResumeData = {
             city: "Москва",
             startDate: "2020-03",
             endDate: "2021-05",
-            responsibilities:
-                "Верстка компонентов, поддержка библиотеки компонентов, работа с Git."
+            responsibilities: "Верстка компонентов, поддержка библиотеки компонентов, работа с Git."
         }
     ],
     education: [
@@ -50,29 +49,29 @@ export const demoResumeData = {
     ],
     additionalEducation: [
         {
-            course: "React-разработка",
-            provider: "Яндекс.Практикум",
+            title: "React-разработка",
+            organization: "Яндекс.Практикум",
             year: "2021",
             hasCertificate: true
         },
         {
-            course: "UX/UI-дизайн",
-            provider: "Skillbox",
+            title: "UX/UI-дизайн",
+            organization: "Skillbox",
             year: "2020",
             hasCertificate: false
         }
     ],
     skills: {
-        medicalSkills: false,
-        militarySkills: false,
-        driverCategories: { B: true },
+        medicalBook: false,
+        militaryTicket: false,
+        driverLicense: ["B"],
         languages: [
-            { language: "Английский", level: "B2" },
-            { language: "Немецкий", level: "A2" }
+            {language: "Английский", level: "B2"},
+            {language: "Немецкий", level: "A2"}
         ],
         personalQualities: "Ответственность, коммуникабельность, самоорганизация.",
         professionalSkills:
-            "HTML5, CSS3, JavaScript (ES6+), React, Redux, Git, REST API, адаптивная верстка.",
+            "HTML5, CSS3, JavaScript (ES6+), React, Redux, Git, REST API, Адаптивная верстка",
         aboutMe:
             "Фронтенд-разработчик с опытом создания отзывчивых и доступных интерфейсов. Люблю разбираться в деталях и автоматизировать рутину."
     }
