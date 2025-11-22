@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../styles/ui/DropDown.css";
 import OptionButton from "./OptionButton.jsx";
 
-export default function CustomDropdown({ options, initialValue, onSelect }) {
+export default function CustomDropdown({ placeholder, options, initialValue, onSelect }) {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(initialValue || "");
 
@@ -14,12 +14,10 @@ export default function CustomDropdown({ options, initialValue, onSelect }) {
         if (onSelect) onSelect(option);
     };
 
-    const placeholder = "Выберите...";
-
     return (
         <div className="dropdown">
             <OptionButton
-                text={selectedOption || placeholder}
+                text={selectedOption || (placeholder || "Выберите...")}
                 onClick={toggleDropdown}
             />
             {isOpen && (
