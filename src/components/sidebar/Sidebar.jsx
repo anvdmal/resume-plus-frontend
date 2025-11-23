@@ -7,7 +7,7 @@ import SearchIcon from '../../assets/ic-search.svg?raw';
 
 import UpgradeCard from '../upgrade-card/UpgradeCard';
 
-const Sidebar = () => {
+const Sidebar = ({ userName, userLabel }) => {
     const [activeTab, setActiveTab] = useState('home');
 
     const getIcon = (iconName) => {
@@ -21,6 +21,7 @@ const Sidebar = () => {
 
     const renderNavItem = (id, title, iconName) => (
         <button
+            key={id}
             className={`nav-item ${activeTab === id ? 'active' : ''}`}
             onClick={() => setActiveTab(id)}
         >
@@ -41,10 +42,14 @@ const Sidebar = () => {
             </div>
 
             <div className="user-info">
-                <img src="https://via.placeholder.com/56" alt="Аватар пользователя" className="avatar" />
+                <img
+                    src={"https://randomuser.me/api/portraits/women/12.jpg"}
+                    alt="Аватар пользователя"
+                    className="avatar"
+                />
                 <div className="user-details">
-                    <span className="user-label">Мой аккаунт</span>
-                    <span className="user-name">Имя Фамилия</span>
+                    <span className="user-label">{userLabel || 'Мой аккаунт'}</span>
+                    <span className="user-name">{userName || 'Анна Смирнова'}</span>
                 </div>
             </div>
 
@@ -54,7 +59,6 @@ const Sidebar = () => {
                 {renderNavItem('search', 'Поиск работы', 'search')}
             </nav>
 
-            {}
             <div className="sidebar-upgrade-section">
                 <UpgradeCard />
             </div>

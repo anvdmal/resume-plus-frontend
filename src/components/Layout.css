@@ -10,7 +10,6 @@
     margin-left: 280px;
     padding: 2rem;
     background-color: white;
-    padding-bottom: 16rem; /* ← добавлено! */
 }
 
 .content-wrapper {
@@ -22,13 +21,12 @@
 .greeting {
     font: 600 40px/1.4 "Fira Sans", sans-serif;
     color: var(--text-dark-grey-100);
-    margin-bottom: 24px;
 }
 
 .section-title {
     font: 500 16px/1.4 "Open Sans", sans-serif;
     color: var(--text-dark-grey-100);
-    margin: 48px 0 24px 0;
+    margin: 0 0 24px 0;
 }
 
 .import-cards-container,

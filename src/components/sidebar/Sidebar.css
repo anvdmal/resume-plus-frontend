@@ -99,6 +99,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 185px;
 }
 
 @media (max-width: 768px) {

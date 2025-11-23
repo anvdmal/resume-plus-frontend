@@ -44,7 +44,7 @@ function App() {
             <Sidebar />
             <main className="main-content">
                 <div className="content-wrapper">
-                    <h1 className="greeting">Привет, Имя!</h1>
+                    <h1 className="greeting">Привет, Анна!</h1>
 
                     <section>
                         <h2 className="section-title">Импорт данных</h2>
@@ -97,7 +97,7 @@ function App() {
                 <input type="file" ref={pdfInputRef} accept=".pdf" style={{ display: 'none' }} onChange={onPDFFileChange} />
                 <input type="file" ref={jsonInputRef} accept=".json" style={{ display: 'none' }} onChange={onJSONFileChange} />
             </main>
-            <Footer /> {}
+            {/*<Footer /> {}*/}
         </div>
     );
 }
