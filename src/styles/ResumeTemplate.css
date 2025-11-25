@@ -72,6 +72,9 @@
 
 .main-content section {
     margin-top: 1.7rem;
+    align-items: center;    /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали */
+    text-align: center;     /* Центрирование текста */
 }
 
 .main-content h2 {

@@ -41,7 +41,15 @@ body {
     padding-top: 1px;
 }
 
-.h2 {
+/* .h2 {
+    text-align: center;
+    color: black;
+    margin: 0;
+    font: var(--font-body-opensans-regular-18);
+    width: 100%;
+} */
+
+.signupin-form h2 {
     text-align: center;
     color: black;
     margin: 0;
@@ -49,9 +57,13 @@ body {
     width: 100%;
 }
 
-/* .signupin-form h2 {
-    margin-bottom: 1.5rem;
-} */
+.social-login h2 {
+    text-align: center;
+    color: black;
+    margin: 0;
+    font: var(--font-body-opensans-regular-18);
+    width: 100%;
+}
 
 .input-fields {
     width: 100%;
