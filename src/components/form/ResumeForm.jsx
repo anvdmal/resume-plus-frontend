@@ -43,7 +43,9 @@ export default function ResumeForm({onSubmitForm, onPreviewChange}) {
                 <EducationSection control={control} errors={errors}/>
                 <AdditionalEducationSection control={control} errors={errors}/>
                 <SkillsSection control={control} errors={errors}/>
-                <MainButton text="Создать резюме" variant="rose" type="submit"/>
+                <div className="button-center-container">
+                    <MainButton text="Создать резюме" variant="rose" type="submit"/>
+                </div>
             </form>
         </div>
     );
