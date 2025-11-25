@@ -4,7 +4,7 @@ import ToggleButton from "../ui/ToggleButton.jsx";
 import checkmarkIcon from "../../assets/ic-checkmark.svg";
 import infoIcon from "../../assets/ic-info-circle.svg";
 import arrowRightIcon from "../../assets/ic-white-arrow-right.svg";
-import "../../styles/subscription_components/SubscriptionCard.css";
+import "../../styles/subscription/SubscriptionCard.css";
 import premiumLogo from "../../assets/logo-icon-premium.svg";
 
 export default function SubscriptionCard() {

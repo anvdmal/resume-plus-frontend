@@ -1,14 +1,14 @@
 import React from 'react';
-import '../styles/Header.css';
-import MainButton from "./ui/MainButton.jsx";
-import SecondaryButton from "./ui/SecondaryButton.jsx";
+import '../../styles/ui/Header.css';
+import MainButton from "./MainButton.jsx";
+import SecondaryButton from "./SecondaryButton.jsx";
 
 export default function Header({variant = 'home'}) {
     return (
         <header className={`header header-${variant}`}>
             <div className="header-content">
                 <div className="header-logo">
-                    <img src="../../public/logo-icon.svg" alt="Resume+ Logo" className="logo-icon"/>
+                    <img src="../../../public/logo-icon.svg" alt="Resume+ Logo" className="logo-icon"/>
                     <span className="logo-text">Резюме+</span>
                 </div>
                 {variant === 'main-screen' && (
