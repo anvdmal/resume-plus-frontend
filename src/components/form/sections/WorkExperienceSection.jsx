@@ -7,6 +7,8 @@ import DatePickerField from '../DatePickerField.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import AddingButton from '../AddingButton.jsx';
 import CancelIcon from '../../../assets/ic-cancel.svg';
+import MainButton from '../../components/ui/MainButton';
+import { workExperienceHints } from '../../tips/hints';
 
 function WorkExperienceItem({ control, errors, index, onRemove }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -113,11 +115,7 @@ export default function WorkExperienceSection({ control, errors }) {
       <SectionHeader 
         iconSrc="src/assets/ic-work-experience.svg" 
         title="Опыт работы" 
-        hints={[
-          'Укажите точные даты и обязанности',
-          'Начните с последнего места работы',
-          'Добавьте достижения, если есть'
-        ]} 
+        hints={workExperienceHints}
       />
       {fields.map((field, index) => (
         <WorkExperienceItem

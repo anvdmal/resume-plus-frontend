@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useFieldArray, Controller } from 'react-hook-form';
 import InputField from '../../ui/InputField.jsx';
 import CustomDropdown from '../../ui/CustomDropdown.jsx';
@@ -33,9 +33,7 @@ export default function EducationSection({ control }) {
         <SectionHeader 
                 iconSrc="src/assets/ic-education.svg" 
                 title="Образование" 
-                hints={[
-                  'Советы'
-                ]} 
+                hints={educationHints}
               />
       {fields.map((field, index) => (
         <div key={field.id} className="section-item-transparent">

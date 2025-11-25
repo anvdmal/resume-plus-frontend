@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { useFieldArray, Controller } from 'react-hook-form';
+import InputField from '../../components/ui/InputField';
+import CustomDropdown from '../../components/ui/CustomDropdown';
+import SectionHeader from '../components/SectionHeader';
+import AddingButton from '../components/AddingButton';
+import { additionalEducationHints } from '../../tips/hints';
 import InputField from '../../ui/InputField.jsx';
-import CustomDropdown from '../../ui/CustomDropdown.jsx';
-import SectionHeader from '../SectionHeader.jsx';
-import AddingButton from '../AddingButton.jsx';
 import CancelIcon from "../../../assets/ic-cancel.svg";
 
 const currentYear = new Date().getFullYear();
@@ -24,9 +26,7 @@ export default function AdditionalEducationSection({ control }) {
       <SectionHeader 
                 iconSrc="src/assets/ic-additional-education.svg" 
                 title="Дополнительное образование" 
-                hints={[
-                'Советы'
-                ]} 
+                hints={additionalEducationHints}
             />
       {fields.map((field, index) => (
         <div key={field.id} className="section-item-transparent">
