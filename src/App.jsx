@@ -1,19 +1,17 @@
-import { useState, useRef, useEffect } from 'react';
-import Sidebar from './components/Sidebar';
-import './App.css';
+// src/App.jsx
+import { useRef } from 'react';
+import Sidebar from './components/sidebar/Sidebar';
+import ImportCard from './components/import-card/ImportCard';
+import CreateResumeCard from './components/create-card/CreateResumeCard';
+import './components/Layout.css'; // ← просто импортируем CSS
+import './App.css'; // ← остаётся без изменений!
 
 function App() {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const pdfInputRef = useRef(null);
     const jsonInputRef = useRef(null);
 
-    const handleImportPDF = () => {
-        pdfInputRef.current?.click();
-    };
-
-    const handleImportJSON = () => {
-        jsonInputRef.current?.click();
-    };
+    const handleImportPDF = () => pdfInputRef.current?.click();
+    const handleImportJSON = () => jsonInputRef.current?.click();
 
     const onPDFFileChange = (e) => {
         const file = e.target.files?.[0];
@@ -23,7 +21,6 @@ function App() {
             return;
         }
         alert(`Выбран PDF: ${file.name}`);
-        console.log('PDF файл:', file);
     };
 
     const onJSONFileChange = (e) => {
@@ -34,7 +31,6 @@ function App() {
             try {
                 const json = JSON.parse(event.target.result);
                 alert(`Успешно загружен JSON с ${Object.keys(json).length} полями`);
-                console.log('JSON данные:', json);
                 // eslint-disable-next-line no-unused-vars
             } catch (err) {
                 alert('Ошибка: файл не является валидным JSON');
@@ -43,55 +39,67 @@ function App() {
         reader.readAsText(file);
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (isSidebarOpen && !event.target.closest('.sidebar') && !event.target.closest('.hamburger')) {
-                setIsSidebarOpen(false);
-            }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, [isSidebarOpen]);
-
     return (
-        <>
-            <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+        <div className="app-container">
+            <Sidebar />
 
-            <main className={`main-content ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-                <button className="hamburger" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                    ☰
-                </button>
+            <main className="main-content">
+                <div className="content-wrapper">
+                    <h1 className="greeting">Привет, Имя!</h1>
 
-                <h1>Resume+</h1>
+                    <section>
+                        <h2 className="section-title">Импорт данных</h2>
+                        <div className="import-cards-container">
+                            <ImportCard
+                                iconSrc="/ic-file-export.svg"
+                                title="PDF"
+                                description="Загрузи свое старое резюме в формате .pdf и преобразуй его"
+                                onClick={handleImportPDF}
+                                backgroundColor="rgba(77, 167, 179, 0.25)" // ← primary-moonstone-25
+                            />
+                            <ImportCard
+                                iconSrc="/ic-hh.svg"
+                                title="hh.ru"
+                                description="Быстро создай новое резюме благодаря импорту данных из hh.ru"
+                                onClick={handleImportJSON}
+                                backgroundColor="rgba(167, 89, 120, 0.25)" // ← secondary-chine-rose-25
+                            />
+                        </div>
+                    </section>
 
-                <div className="import-buttons">
-                    <button onClick={handleImportPDF} className="import-btn pdf">
-                        Импорт из PDF
-                    </button>
-                    <button onClick={handleImportJSON} className="import-btn json">
-                        Импорт из JSON
-                    </button>
+                    <section>
+                        <h2 className="section-title">Создание идеального резюме</h2>
+                        <div className="create-resume-cards-container">
+                            <CreateResumeCard
+                                iconSrc="/ic-file-edit.svg"
+                                title="Конструктор резюме"
+                                description="Создавай и редактируй свои резюме при помощи ИИ"
+                                onClick={() => alert('Конструктор резюме')}
+                                backgroundColor="rgba(218, 183, 133, 0.25)" // ← info-tan-25
+                            />
+                            <CreateResumeCard
+                                iconSrc="/ic-cover-letter.svg"
+                                title="Сопроводительное письмо"
+                                description="Дополни резюме – рекрутер точно обратит внимание"
+                                onClick={() => alert('Сопроводительное письмо')}
+                                backgroundColor="rgba(218, 183, 133, 0.25)" // ← info-tan-25
+                            />
+                            <CreateResumeCard
+                                iconSrc="/ic-website-builder.svg"
+                                title="Конструктор сайта"
+                                description="Преврати свое резюме в персональный веб-сайт одним кликом"
+                                onClick={() => alert('Конструктор сайта')}
+                                backgroundColor="rgba(218, 183, 133, 0.25)" // ← info-tan-25
+                            />
+                        </div>
+                    </section>
+
                 </div>
 
-                {}
-                <input
-                    type="file"
-                    ref={pdfInputRef}
-                    accept=".pdf"
-                    style={{display: 'none'}}
-                    onChange={onPDFFileChange}
-                />
-                <input
-                    type="file"
-                    ref={jsonInputRef}
-                    accept=".json"
-                    style={{ display: 'none' }}
-                    onChange={onJSONFileChange}
-                />
-
-
+                <input type="file" ref={pdfInputRef} accept=".pdf" style={{ display: 'none' }} onChange={onPDFFileChange} />
+                <input type="file" ref={jsonInputRef} accept=".json" style={{ display: 'none' }} onChange={onJSONFileChange} />
             </main>
-        </>
+        </div>
     );
 }
 
