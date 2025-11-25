@@ -2,7 +2,7 @@ import React from "react";
 import InputField from "../ui/InputField.jsx";
 import MainButton from "../ui/MainButton.jsx";
 import blobImage from "../../assets/background_blob.svg";
-import "../../styles/main_sections/LetsCreateResumeSection.css";
+import "../../styles/main-sections/LetsCreateResumeSection.css";
 
 export default function LetsCreateResumeSection() {
     return (

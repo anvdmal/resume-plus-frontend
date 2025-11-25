@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 2rem;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem;
     background-color: white;
     min-height: 100vh;
     align-items: start;

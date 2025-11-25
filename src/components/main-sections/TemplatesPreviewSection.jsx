@@ -1,7 +1,7 @@
 import Template1 from "../../assets/img-template-one.png";
 import Template2 from "../../assets/img-template-two.png";
 import Template3 from "../../assets/img-template-three.png";
-import "../../styles/main_sections/TemplatesPreviewSection.css";
+import "../../styles/main-sections/TemplatesPreviewSection.css";
 
 export default function TemplatesPreviewSection() {
     return (

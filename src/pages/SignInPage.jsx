@@ -3,7 +3,7 @@ import InputField from "../components/ui/InputField.jsx";
 import MainButton from "../components/ui/MainButton.jsx";
 import TextButtonWithIcon from "../components/ui/TextButtonWithIcon.jsx";
 import "../styles/pages/SignUpAndInPages.css";
-import Header from "../components/Header.jsx";
+import Header from "../components/ui/Header.jsx";
 
 import googleIcon from "../assets/ic-google.svg";
 import hhIcon from "../assets/ic-hh.svg";

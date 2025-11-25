@@ -2,10 +2,10 @@ import React, {useState} from "react";
 import {debounce} from 'lodash';
 import ResumeForm from "../components/form/ResumeForm.jsx";
 import ResumeRenderer from "../components/templates/ResumeRenderer.jsx";
-import {demoResumeData} from "../data/demoResumeData.js";
-import "../styles/ResumeEditorPage.css";
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
+import {demoResumeData} from "../demo-data/demoResumeData.js";
+import "../styles/pages/ResumeEditorPage.css";
+import Header from "../components/ui/Header.jsx";
+import Footer from "../components/ui/Footer.jsx";
 
 const debouncedSetPreview = debounce((data, setState) => {
     setState(data);

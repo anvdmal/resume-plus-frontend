@@ -2,7 +2,7 @@ import React, {useEffect, useMemo} from 'react';
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {resumeSchema} from './schema.js';
-import {demoResumeData} from '../../data/demoResumeData.js';
+import {demoResumeData} from '../../demo-data/demoResumeData.js';
 import {mapFormToResumeData, mapResumeDataToForm} from '../../utils/mapResumeData.jsx';
 import MainButton from '../ui/MainButton.jsx';
 import PersonalInfoSection from './sections/PersonalInfoSection.jsx';
