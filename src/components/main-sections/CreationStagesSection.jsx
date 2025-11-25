@@ -4,6 +4,7 @@ import ResultIcon from "../../assets/ic-result.svg";
 import TemplateIcon from "../../assets/ic-template.svg";
 import MainButton from "../ui/MainButton.jsx";
 import "../../styles/main-sections/CreationStagesSection.css"
+import {Link} from "react-router-dom";
 
 export default function CreationStagesSection() {
     return (
@@ -25,9 +26,11 @@ export default function CreationStagesSection() {
                     title="РЕЗУЛЬТАТ"
                     description="Скачайте готовое резюме в удобном формате и отправляйте работодателям!"/>
             </div>
-            <MainButton
-                text="Создать резюме"
-                variant="rose"/>
+            <Link to="/edit" style={{ textDecoration: "none" }}>
+                <MainButton
+                    text="Создать резюме"
+                    variant="rose"/>
+            </Link>
         </div>
     )
 }

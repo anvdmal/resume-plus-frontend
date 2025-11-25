@@ -3,18 +3,19 @@ import InputField from "../ui/InputField.jsx";
 import MainButton from "../ui/MainButton.jsx";
 import blobImage from "../../assets/background_blob.svg";
 import "../../styles/main-sections/LetsCreateResumeSection.css";
+import {Link} from "react-router-dom";
 
 export default function LetsCreateResumeSection() {
     return (
         <section className="lets-create-section">
             <div className="image">
-                <img 
-                    src={blobImage} 
-                    alt="Декоративная лужа" 
+                <img
+                    src={blobImage}
+                    alt="Декоративная лужа"
                     className="blob-image"
                 />
             </div>
-            
+
             <div className="content">
                 <h1 className="title">
                     Будущее работы начинается с твоего резюме
@@ -24,20 +25,22 @@ export default function LetsCreateResumeSection() {
                 </p>
                 <div className="form">
                     <div className="inputs">
-                        <InputField 
+                        <InputField
                             placeholder="Имя"
                             variant="gray"
                         />
-                        <InputField 
+                        <InputField
                             placeholder="Профессия"
                             variant="gray"
                         />
                     </div>
                 </div>
-                <MainButton 
+                <Link to="/edit" style={{ textDecoration: "none" }}>
+                    <MainButton
                         text="Сгенерировать"
                         variant="tan"
                     />
+                </Link>
             </div>
         </section>
     );
