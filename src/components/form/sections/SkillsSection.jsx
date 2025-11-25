@@ -1,20 +1,20 @@
-import React, {useEffect} from 'react';
-import {useFieldArray, Controller} from 'react-hook-form';
-import CustomDropdown from '../../ui/CustomDropdown.jsx';
-import TextArea from '../../ui/TextArea.jsx';
+import React, { useEffect } from 'react';
+import { useFieldArray, Controller } from 'react-hook-form';
+import CustomDropdown from '../../../components/ui/CustomDropdown';
 import SectionHeader from '../SectionHeader.jsx';
+import TextArea from '../../ui/TextArea.jsx';
 import AddingButton from '../AddingButton.jsx';
-import CancelIcon from "../../../assets/ic-cancel.svg";
+import { skillsHints } from '../../../tips/hints';
 
 const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 const languages = ['Английский', 'Немецкий', 'Французский', 'Испанский', 'Итальянский', 'Китайский', 'Японский'];
 
-export default function SkillsSection({control, errors}) {
-    const {fields, append, remove} = useFieldArray({control, name: 'languages'});
+export default function SkillsSection({ control, errors }) {
+    const { fields, append, remove } = useFieldArray({ control, name: 'languages' });
 
     useEffect(() => {
         if (fields.length === 0) {
-            append({language: '', level: ''});
+            append({ language: '', level: '' });
         }
     }, [fields.length, append]);
 
@@ -23,7 +23,7 @@ export default function SkillsSection({control, errors}) {
             <SectionHeader
                 iconSrc="src/assets/ic-skills.svg"
                 title="Навыки и компетенции"
-                hints={['Советы']}
+                hints={skillsHints}
             />
 
             <div className="checkbox-group">
@@ -31,7 +31,7 @@ export default function SkillsSection({control, errors}) {
                     <Controller
                         name="medicalSkills"
                         control={control}
-                        render={({field}) => <input type="checkbox" className="checkbox-input" {...field} />}
+                        render={({ field }) => <input type="checkbox" className="checkbox-input" {...field} />}
                     />
                     Наличие медицинской книжки
                 </label>
@@ -43,7 +43,7 @@ export default function SkillsSection({control, errors}) {
                     <Controller
                         name="militarySkills"
                         control={control}
-                        render={({field}) => <input type="checkbox" className="checkbox-input" {...field} />}
+                        render={({ field }) => <input type="checkbox" className="checkbox-input" {...field} />}
                     />
                     Наличие военного билета
                 </label>
@@ -51,22 +51,14 @@ export default function SkillsSection({control, errors}) {
             </div>
 
             <label className="group-label">Водительское удостоверение:</label>
-            <div className="driver-categories-group">
+            <div className="group">
                 {['A', 'A1', 'B', 'BE', 'C', 'CE', 'D', 'DE', 'M', 'Tb', 'Tm'].map(category => (
                     <label key={category} className="checkbox-label">
                         <Controller
                             name={`driverCategories.${category}`}
                             control={control}
-                            render={({field}) => (
-                                <input
-                                    type="checkbox"
-                                    className="checkbox-input"
-                                    {...field}
-                                    checked={!!field.value}
-                                />
-                            )}
+                            render={({ field }) => <input type="checkbox" className="checkbox-input" {...field} />}
                         />
-
                         {category}
                     </label>
                 ))}
@@ -81,9 +73,8 @@ export default function SkillsSection({control, errors}) {
                                 <Controller
                                     name={`languages.${index}.language`}
                                     control={control}
-                                    render={({field: {onChange, value}}) => (
-                                        <CustomDropdown placeholder='Язык' options={languages} initialValue={value}
-                                                        onSelect={onChange}/>
+                                    render={({ field: { onChange, value } }) => (
+                                        <CustomDropdown placeholder = 'Язык' options={languages} initialValue={value} onSelect={onChange} />
                                     )}
                                 />
                                 {/* {errors.languages?.[index]?.language && <p className="error">{errors.languages[index].language.message}</p>} */}
@@ -92,15 +83,14 @@ export default function SkillsSection({control, errors}) {
                                 <Controller
                                     name={`languages.${index}.level`}
                                     control={control}
-                                    render={({field: {onChange, value}}) => (
-                                        <CustomDropdown placeholder='Уровень' options={levels} initialValue={value}
-                                                        onSelect={onChange}/>
+                                    render={({ field: { onChange, value } }) => (
+                                        <CustomDropdown placeholder = 'Уровень' options={levels} initialValue={value} onSelect={onChange} />
                                     )}
                                 />
                                 {/* {errors.languages?.[index]?.level && <p className="error">{errors.languages[index].level.message}</p>} */}
                             </div>
                             <button className="delete-button" onClick={() => remove(index)}>
-                                <img src={CancelIcon} alt="Remove" className="cancel-icon"/>
+                                <img src="src/assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
                             </button>
                         </div>
                     </div>
@@ -109,27 +99,27 @@ export default function SkillsSection({control, errors}) {
 
             <AddingButton
                 text="Добавить иностранный язык"
-                onClick={() => append({language: '', level: ''})}
+                onClick={() => append({ language: '', level: '' })}
             />
 
             <Controller
                 name="personalQualities"
                 control={control}
-                render={({field}) => <TextArea placeholder="Личные качества" rows={4} {...field} />}
+                render={({ field }) => <TextArea placeholder="Личные качества" rows={4} {...field} />}
             />
             {/* {errors.personalQualities && <p className="error">{errors.personalQualities.message}</p>} */}
 
             <Controller
                 name="professionalSkills"
                 control={control}
-                render={({field}) => <TextArea placeholder="Профессиональные навыки" rows={4} {...field} />}
+                render={({ field }) => <TextArea placeholder="Профессиональные навыки" rows={4} {...field} />}
             />
             {/* {errors.professionalSkills && <p className="error">{errors.professionalSkills.message}</p>} */}
 
             <Controller
                 name="about"
                 control={control}
-                render={({field}) => <TextArea placeholder="О себе" rows={4} {...field} />}
+                render={({ field }) => <TextArea placeholder="О себе" rows={4} {...field} />}
             />
             {/* {errors.about && <p className="error">{errors.about.message}</p>} */}
         </section>
