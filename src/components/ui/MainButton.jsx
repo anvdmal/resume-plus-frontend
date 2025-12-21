@@ -1,12 +1,7 @@
 import React from "react";
 import "../../styles/ui/MainButton.css";
 
-export default function MainButton({
-  text,
-  children,
-  onClick,
-  variant = "tan",
-}) {
+export default function MainButton({text, children, onClick, variant = "tan"}) {
   const classMap = {
     tan: "btn-tan",
     moonstone: "btn-moonstone",
