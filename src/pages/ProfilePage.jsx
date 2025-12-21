@@ -1,9 +1,9 @@
 import { useRef } from 'react';
-import Sidebar from '../components/sidebar/Sidebar';
-import ImportCard from '../components/import-card/ImportCard';
-import CreateResumeCard from '../components/create-card/CreateResumeCard';
+import Sidebar from '../components/profile/Sidebar.jsx';
+import ImportCard from '../components/profile/ImportCard.jsx';
+import CreateResumeCard from '../components/profile/CreateResumeCard.jsx';
 import Footer from '../components/footer/Footer';
-import '../components/Layout.css';
+import '../styles/pages/ProfilePage.css';
 import '../App.css';
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
                 <div className="content-wrapper">
                     <h1 className="greeting">Привет, Анна!</h1>
 
-                    <section>
+                    <section className="import-cards">
                         <h2 className="section-title">Импорт данных</h2>
                         <div className="import-cards-container">
                             <ImportCard
@@ -66,7 +66,7 @@ function App() {
                         </div>
                     </section>
 
-                    <section>
+                    <section className="create-resume-cards">
                         <h2 className="section-title">Создание идеального резюме</h2>
                         <div className="create-resume-cards-container">
                             <CreateResumeCard

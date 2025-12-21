@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import './Sidebar.css';
+import '../../styles/profile/Sidebar.css';
 
 import HomeIcon from '../../assets/ic-home.svg?raw';
 import FileIcon from '../../assets/ic-file.svg?raw';
 import SearchIcon from '../../assets/ic-search.svg?raw';
 
-import UpgradeCard from '../upgrade-card/UpgradeCard';
+import UpgradeCard from './UpgradeCard.jsx';
 
 const Sidebar = ({ userName, userLabel }) => {
     const [activeTab, setActiveTab] = useState('home');

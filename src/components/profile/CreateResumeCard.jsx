@@ -1,5 +1,5 @@
 import React from 'react';
-import './CreateResumeCard.css';
+import '../../styles/profile/CreateResumeCard.css';
 
 import EditIcon from '../../assets/ic-file-edit.svg?raw';
 import CoverLetterIcon from '../../assets/ic-cover-letter.svg?raw';

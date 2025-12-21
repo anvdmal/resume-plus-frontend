@@ -1,5 +1,5 @@
 import React from 'react';
-import './ImportCard.css';
+import '../../styles/profile/ImportCard.css';
 
 import HHIcon from '../../assets/ic-hh.svg?raw';
 import ArrowSwitchIcon from '../../assets/ic-arrow-switch.svg?raw';

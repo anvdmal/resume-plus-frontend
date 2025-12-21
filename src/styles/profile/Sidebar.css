@@ -6,10 +6,12 @@
     width: 280px;
     background-color: white;
     z-index: 1000;
-    padding: 24px 16px;
+    padding: 24px 12px 24px 16px;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .sidebar-header {
@@ -33,15 +35,15 @@
 .user-info {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
+    gap: 1rem;
 }
 
 .avatar {
-    width: 56px;
-    height: 56px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
+    margin: 0;
 }
 
 .user-details {
@@ -51,8 +53,8 @@
 }
 
 .user-label {
-    font: var(--font-caption-opensans-semibold-14);
-    color: var(--text-dark-grey-75);
+    font: 600 16px/1.4 "Open Sans", sans-serif;
+    color: var(--text-dark-grey-100);
 }
 
 .user-name {
@@ -99,7 +101,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 185px;
+    margin-top: auto;
+    padding-bottom: 24px;
 }
 
 @media (max-width: 768px) {

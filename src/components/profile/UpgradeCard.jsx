@@ -1,10 +1,13 @@
 import React from 'react';
-import './UpgradeCard.css';
-import MainButton from '../core-components/MainButton';
+import { useNavigate } from 'react-router-dom';
+import '../../styles/profile/UpgradeCard.css';
+import MainButton from '../ui/MainButton';
 
 const UpgradeCard = () => {
+    const navigate = useNavigate();
+
     const handleUpgradeClick = () => {
-        alert('Клик по кнопке "Прокачать резюме"');
+        navigate('/subscript');
     };
 
     return (
