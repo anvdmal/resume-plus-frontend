@@ -4,6 +4,7 @@ import SignUpPage from "./pages/SignUpPage.jsx";
 import SignInPage from "./pages/SignInPage.jsx";
 import MainPage from "./pages/MainPage.jsx";
 import ResumeEditorPage from "./pages/ResumeEditorPage.jsx";
+import ProfilePage from "./pages/ProfilePage.jsx";
 
 export default function App() {
     return (
@@ -15,6 +16,7 @@ export default function App() {
                 <Route path="/edit" element={<ResumeEditorPage />} />
                 <Route path="/edit/:template" element={<ResumeEditorPage />} />
                 <Route path="/subscript" element={<SubscriptionPage/>}/>
+                <Route path="/profile" element={<ProfilePage/>}/>
             </Routes>
         </BrowserRouter>
     )
