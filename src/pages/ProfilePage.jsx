@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import Sidebar from '../components/profile/Sidebar.jsx';
 import ImportCard from '../components/profile/ImportCard.jsx';
 import CreateResumeCard from '../components/profile/CreateResumeCard.jsx';
-import Footer from '../components/footer/Footer';
 import '../styles/pages/ProfilePage.css';
 import '../App.css';
 
