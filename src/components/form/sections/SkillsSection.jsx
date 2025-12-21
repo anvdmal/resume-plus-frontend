@@ -4,6 +4,8 @@ import CustomDropdown from '../../../components/ui/CustomDropdown';
 import SectionHeader from '../SectionHeader.jsx';
 import TextArea from '../../ui/TextArea.jsx';
 import AddingButton from '../AddingButton.jsx';
+import SkillsIcon from '../../../assets/ic-skills.svg';
+import CancelIcon from '../../../assets/ic-cancel.svg';
 import { skillsHints } from '../../../tips/hints';
 
 const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
@@ -21,7 +23,7 @@ export default function SkillsSection({ control, errors }) {
     return (
         <section className="skills-section section">
             <SectionHeader
-                iconSrc="src/assets/ic-skills.svg"
+                iconSrc={SkillsIcon}
                 title="Навыки и компетенции"
                 hints={skillsHints}
             />
@@ -90,7 +92,7 @@ export default function SkillsSection({ control, errors }) {
                                 {/* {errors.languages?.[index]?.level && <p className="error">{errors.languages[index].level.message}</p>} */}
                             </div>
                             <button className="delete-button" onClick={() => remove(index)}>
-                                <img src="src/assets/ic-cancel.svg" alt="Remove" className="cancel-icon" />
+                                <img src={CancelIcon} alt="Remove" className="cancel-icon" />
                             </button>
                         </div>
                     </div>

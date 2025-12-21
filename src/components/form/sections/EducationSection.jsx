@@ -5,6 +5,7 @@ import CustomDropdown from '../../ui/CustomDropdown.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import AddingButton from '../AddingButton.jsx';
 import CancelIcon from "../../../assets/ic-cancel.svg";
+import EducationIcon from "../../../assets/ic-education.svg";
 import {educationHints} from '../../../tips/hints';
 
 const educationLevels = [
@@ -32,7 +33,7 @@ export default function EducationSection({control}) {
     return (
         <section className="education-section section">
             <SectionHeader
-                iconSrc="src/assets/ic-education.svg"
+                iconSrc={EducationIcon}
                 title="Образование"
                 hints={educationHints}
             />

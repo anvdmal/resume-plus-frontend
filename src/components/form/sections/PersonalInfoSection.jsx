@@ -4,13 +4,14 @@ import InputField from '../../ui/InputField.jsx';
 import PhotoUpload from '../PhotoUpload.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import DatePickerField from '../DatePickerField.jsx';
+import PersonalDataIcon from '../../../assets/ic-personal-data.svg';
 import '../../../styles/PersonalInfoSection.css';
 
 export default function PersonalInfoSection({control}) {
     return (
         <section className="personal-info-section section">
             <SectionHeader
-                iconSrc="src/assets/ic-personal-data.svg"
+                iconSrc={PersonalDataIcon}
                 title="Личные данные"
             />
             <div className="personal-info-layout">

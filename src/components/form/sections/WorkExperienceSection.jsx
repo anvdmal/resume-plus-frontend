@@ -7,6 +7,7 @@ import DatePickerField from '../DatePickerField.jsx';
 import SectionHeader from '../SectionHeader.jsx';
 import AddingButton from '../AddingButton.jsx';
 import CancelIcon from '../../../assets/ic-cancel.svg';
+import WorkExperienceIcon from '../../../assets/ic-work-experience.svg';
 import { workExperienceHints } from '../../../tips/hints';
 
 function WorkExperienceItem({ control, errors, index, onRemove }) {
@@ -112,7 +113,7 @@ export default function WorkExperienceSection({ control, errors }) {
   return (
     <section className="work-experience-section section">
       <SectionHeader 
-        iconSrc="src/assets/ic-work-experience.svg" 
+        iconSrc={WorkExperienceIcon} 
         title="Опыт работы" 
         hints={workExperienceHints}
       />

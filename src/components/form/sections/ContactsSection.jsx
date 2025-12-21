@@ -6,6 +6,7 @@ import SectionHeader from '../SectionHeader.jsx';
 import OptionButtonReversed from '../OptionButtonReversed.jsx';
 import AddingButton from '../AddingButton.jsx';
 import CancelIcon from '../../../assets/ic-cancel.svg';
+import ContactsIcon from '../../../assets/ic-contacts.svg';
 
 const socialNetworks = [
   'Telegram',
@@ -98,7 +99,7 @@ export default function ContactsSection({ control, errors }) {
   return (
     <section className="contacts-section section">
       <SectionHeader 
-        iconSrc="src/assets/ic-contacts.svg" 
+        iconSrc={ContactsIcon} 
         title="Контакты" 
       />
       <div className='group'>

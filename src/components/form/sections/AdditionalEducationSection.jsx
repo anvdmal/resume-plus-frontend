@@ -6,6 +6,7 @@ import SectionHeader from '../SectionHeader';
 import AddingButton from '../AddingButton';
 import { additionalEducationHints } from '../../../tips/hints';
 import CancelIcon from "../../../assets/ic-cancel.svg";
+import AdditionalEducationIcon from "../../../assets/ic-additional-education.svg";
 
 const currentYear = new Date().getFullYear();
 const years = Array.from({ length: currentYear - 1950 + 1 }, (_, i) => 1950 + i).map(String);
@@ -23,7 +24,7 @@ export default function AdditionalEducationSection({ control }) {
     <section className="additional-education-section section">
         
       <SectionHeader 
-                iconSrc="src/assets/ic-additional-education.svg" 
+                iconSrc={AdditionalEducationIcon} 
                 title="Дополнительное образование" 
                 hints={additionalEducationHints}
             />
