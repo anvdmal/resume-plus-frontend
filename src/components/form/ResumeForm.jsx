@@ -12,9 +12,15 @@ import WorkExperienceSection from './sections/WorkExperienceSection.jsx';
 import AdditionalEducationSection from './sections/AdditionalEducationSection.jsx';
 import SkillsSection from './sections/SkillsSection.jsx';
 import '../../styles/ui/ResumeForm.css';
+import {useNavigate} from "react-router-dom";
 
 export default function ResumeForm({onSubmitForm, onPreviewChange}) {
     const defaultValues = useMemo(() => mapResumeDataToForm(demoResumeData), []);
+    const navigate = useNavigate();
+
+    const handleCreateClick = () => {
+        navigate('/profile');
+    };
 
     const {control, handleSubmit, formState: {errors}, watch} = useForm({
         mode: 'onChange',
@@ -44,7 +50,7 @@ export default function ResumeForm({onSubmitForm, onPreviewChange}) {
                 <AdditionalEducationSection control={control} errors={errors}/>
                 <SkillsSection control={control} errors={errors}/>
                 <div className="button-center-container">
-                    <MainButton text="Создать резюме" variant="rose" type="submit"/>
+                    <MainButton text="Создать резюме" variant="rose" type="submit" onClick={handleCreateClick}/>
                 </div>
             </form>
         </div>
